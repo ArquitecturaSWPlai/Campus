@@ -39,7 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+    'django.contrib.humanize',
+    'django.contrib.sites',
+    'home',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'posts.apps.PostsConfig',
+    'allauth.socialaccount.providers.keycloak',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +70,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -70,14 +78,36 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+SOCIALACCOUNT_PROVIDERS = {
+   'keycloak': {
+      'KEYCLOAK_URL': 'https://auth.plai.mx',
+      'KEYCLOAK_REALM': 'PLAI'
+   },
+}
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+SOCIALACCOUNT_LOGIN_ON_GET = True
+ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400 # 1 day in seconds
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_ON_GET = True
+LOGIN_REDIRECT_URL = "home" 
+
+SITE_ID = 1
+
 WSGI_APPLICATION = 'campusVirtual.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+DATABASES = {    
+    'default': {   
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
@@ -108,7 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 

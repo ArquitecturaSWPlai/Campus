@@ -1,3 +1,88 @@
+@font-face {
+  font-family: "Conv_Nutmeg-Regular";
+  src: url("../fonts/Nutmeg-Regular.eot");
+  src: local("☺"), url("../fonts/Nutmeg-Regular.woff") format("woff"),
+    url("../fonts/Nutmeg-Regular.ttf") format("truetype"),
+    url("../fonts/Nutmeg-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nutmeg-Black";
+  src: url("../fonts/Nutmeg-Black.woff2") format("woff2"),
+    url("../fonts/Nutmeg-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nutmeg-Light";
+  src: url("../fonts/Nutmeg-Light.woff2") format("woff2"),
+    url("../fonts/Nutmeg-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nutmeg Ultra";
+  src: url("../fonts/Nutmeg-UltraLight.woff2") format("woff2"),
+    url("../fonts/Nutmeg-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nutmeg-Bold";
+  src: url("../fonts/Nutmeg-Bold.woff2") format("woff2"),
+    url("../fonts/Nutmeg-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nutmeg-Thin";
+  src: url("../fonts/Nutmeg-Thin.woff2") format("woff2"),
+    url("../fonts/Nutmeg-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nutmeg";
+  src: url("../fonts/Nutmeg-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Nutmeg-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nutmeg Book";
+  src: url("../fonts/Nutmeg-Book.woff2") format("woff2"),
+    url("../fonts/Nutmeg-Book.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nutmeg Headline";
+  src: url("../fonts/NutmegHeadline-Light.woff2") format("woff2"),
+    url("../fonts/NutmegHeadline-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Conv_Nutmeg-Regular", sans-serif !important;
+}
 
 .myp-1 {
     margin-top: 2px !important;
@@ -738,3 +823,35 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
 }
 
 /*  FOOTER END */
+
+
+.bodyCardEF {
+  height: 426px;
+}
+
+/* p {
+  font-family: "Conv_Nutmeg-Regular";
+  color: #363a44;
+  font-size: 15px;
+} */
+
+.h-41px {
+  height: 41px;
+}
+
+
+.onlineDot{
+  height: 12px;
+  width: 12px;
+  background: #42ab02;
+  border-radius: 50%;
+}
+.onlineText{
+  color: #000;
+  border-radius: 104px;
+  font-size: large;
+}
+
+.nombreCE {
+  color: #4d4d4d !important;
+}

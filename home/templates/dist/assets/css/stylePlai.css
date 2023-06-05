@@ -680,9 +680,15 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 img#logoPie1 {
-  width: 240px;
-  height: 90px;
-  padding: 0;
+  width: 167px !important;
+  height: 45px !important;
+  padding: 0 !important;
+}
+
+#logoPie1 {
+  width: 167px !important;
+  height: 45px !important;
+  padding: 0 !important;
 }
 
 img#logoPie2 {
