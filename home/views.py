@@ -46,14 +46,14 @@ def buscar_alumno(request, page):
             response = fetch.get(f"https://apis.academic.lat/v3/schoolControl/students?onlyCurrentStudents=false&pageNumber={page}&rowsPerPage=200", headers=headers)
             response_json = response.json()
 
-            if perfil.curp == "EXTRANJERO":
-                alumnoAcademic = next((alumno for alumno in response_json["informacion"] if alumno["correo"] == usr.email), {})
+            if perfil.curp == "EXTRANJERO" or perfil.curp == "":
+                alumnoAcademic = next((alumno for alumno in response_json["informacion"] if alumno["informacion_contacto"]["correo_electronico"] == usr.email), None)
             else:
-                alumnoAcademic = next((alumno for alumno in response_json["informacion"] if alumno["curp"] == perfil.curp), {})
+                alumnoAcademic = next((alumno for alumno in response_json["informacion"] if alumno["curp"] == perfil.curp), None)
 
-            alumnoAcademic =  alumnoAcademic if alumnoAcademic else {}
+            alumnoAcademic =  alumnoAcademic if alumnoAcademic else None
 
             return alumnoAcademic
     else:
-        return {}
+        return None
 
