@@ -84,7 +84,7 @@ License: For each use you must have a valid license purchased only from above li
 					<!--end::Sidebar mobile toggle-->
 					<!--begin::Mobile logo-->
 					<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-						<a href="../../demo1/dist/index.html" class="d-lg-none">
+						<a href="{% url 'home' %}" class="d-lg-none">
 							<img alt="Logo" src="{% static 'img/logotipo_PLAi_naranja_horizontal.png' %}"
 								style=" height: 40px!important; " />
 						</a>
@@ -404,7 +404,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Menu item-->
 											<!--begin::Menu item-->
 											<div class="menu-item px-5">
-												<a href="https://auth.plai.mx/auth/realms/PLAI/protocol/openid-connect/logout?redirect_uri=index.html" class="menu-link px-5">Cerrar sesión</a> 
+												<a href="{% url 'account_logout'%}" class="menu-link px-5">Cerrar sesión</a> 
 											</div>
 											<!--end::Menu item-->
 										</div>
@@ -7028,7 +7028,7 @@ License: For each use you must have a valid license purchased only from above li
 		}
 
 		const buscarIdMoodle = () => {
-			// // const emailUser = `{{request.user.email}}`;
+			const emailUser = `{{request.user.email}}`;
 			// const emailUser = 'jemina.desantos@plai.mx';
 			// const emailUser = 'daniel.romo@plai.mx';
 			let calendarEl = document.getElementById('calendar');

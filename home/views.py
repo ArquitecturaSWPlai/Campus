@@ -25,7 +25,6 @@ def home(request):
 
             if result:
                 alumnoAcademic.append(result)
-                alumnoAcademic.append(result)
                 print(alumnoAcademic)
                 if len(alumnoAcademic) == 5:
                     break

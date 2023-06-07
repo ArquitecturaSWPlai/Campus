@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6g-r(dtuw5qhuax58rs!5xgzk(26-eyyps&jl4o#el1yu80ta!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-if not DEBUG:
-    ALLOWED_HOSTS = ['*']  # Esto permite que cualquier nombre de host pueda acceder a tu aplicación
-
+#if not DEBUG:
+ #   ALLOWED_HOSTS = ['*']  # Esto permite que cualquier nombre de host pueda acceder a tu aplicación
+ALLOWED_HOSTS = ['wcampus.plai.mx']
 
 
 # Application definition
@@ -106,10 +107,14 @@ WSGI_APPLICATION = 'campusVirtual.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {    
-    'default': {   
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'aprender_respaldo1',
+        'USER': 'postgres',
+        'PASSWORD': 'utj-e191206',
+        'HOST': '54.226.251.165',
+        'PORT': '5432',
     }
 }
 
@@ -147,18 +152,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-STATIC_URL = 'static/'
-# STATIC_ROOT = BASE_DIR / 'static'
-STATICFILES_DIRS = (
-    BASE_DIR / 'static',
-)
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
+
+MEDIA_URL = '/static/img/'
+MEDIA_ROOT = BASE_DIR / "static/img"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGOUT_REDIRECT_URL = 'home'
