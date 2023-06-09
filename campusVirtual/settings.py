@@ -24,11 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6g-r(dtuw5qhuax58rs!5xgzk(26-eyyps&jl4o#el1yu80ta!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #if not DEBUG:
  #   ALLOWED_HOSTS = ['*']  # Esto permite que cualquier nombre de host pueda acceder a tu aplicación
 ALLOWED_HOSTS = ['wcampus.plai.mx']
+if DEBUG:
+    ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -163,6 +165,8 @@ STATICFILES_FINDERS = [
 
 MEDIA_URL = '/static/img/'
 MEDIA_ROOT = BASE_DIR / "static/img"
+if DEBUG:
+    MEDIA_URL = 'media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
