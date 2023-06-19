@@ -4,7 +4,7 @@ import signal
 import schedule
 import time
 import threading
-"""
+
 def my_job():
     # Lógica de tu tarea o job
     from home.views import thread_processing_students
@@ -24,9 +24,8 @@ def handle_interrupt(signum, frame):
 
     # Detén el servidor Django
     sys.exit(0)
-"""
+
 if __name__ == '__main__':
-    """
     # Configura la variable de control para detener el job
     stop_event = threading.Event()
 
@@ -39,7 +38,7 @@ if __name__ == '__main__':
 
     # Registra el manejador de señal para Ctrl+C
     signal.signal(signal.SIGINT, handle_interrupt)
-    """
+
     # Ejecuta toda la aplicación de Django
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'campusVirtual.settings')
     try:
