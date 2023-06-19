@@ -531,7 +531,7 @@ License: For each use you must have a valid license purchased only from above li
 												</i>
 											</span>
 											<a
-												onclick="changePage('controlEscolar'); getfechaCE('{{json_alumno.0.inscripcion_administrativa.fecha_inscripcion}}', '{{json_alumno.0.matricula}}')">
+												onclick="changePage('controlEscolar'); getfechaCE('{{json_alumno.0.fecha_ingreso}}', '{{json_alumno.0.matricula}}')">
 												<span class="menu-title gorditas">Control escolar</span>
 											</a>
 										</span>
@@ -1275,12 +1275,12 @@ License: For each use you must have a valid license purchased only from above li
 														<th>
 															<div class="symbol symbol-50px me-2">
 																<span
-																	class="fw-bold fs-9">{{alumno.inscripcion_administrativa.oferta_educativa.nombre}}</span>
+																	class="fw-bold fs-9">{{alumno.oferta_educativa}}</span>
 															</div>
 														</th>
 														<td>
 															<div class="d-flex flex-column w-100 me-2">
-																<span class="fw-bold fs-9">{{ alumno.inscripcion_administrativa.periodo.fecha_inicio }}</span>
+																<span class="fw-bold fs-9">{{ alumno.fecha_inicio_periodo }}</span>
 															</div>
 														</td>
 													</tr>
@@ -2094,7 +2094,16 @@ License: For each use you must have a valid license purchased only from above li
 			const dia = fecha.getDate() + 1;
 			const mes = fecha.toLocaleString('es-MX', { month: 'long' });
 			const año = fecha.getFullYear();
-			const fechaFormateada = `Miembro desde ${dia} / ${mes} / ${año} <h4 style="color: #ced0d8 !important"> Matrícula: ${mat} </h4>`;
+			let fechaFormateada = ""
+			fecha_validada = fecha instanceof Date && !isNaN(fecha);
+			if(fecha_validada){ 
+				fechaFormateada = `Miembro desde ${dia} / ${mes} / ${año} <h4 style="color: #ced0d8 !important"> Matrícula: ${mat} </h4>`;
+
+			}
+			else{ 
+				fechaFormateada = `<h4 style="color: #ced0d8 !important"> Matrícula: ${mat} </h4>`;
+				
+			}
 			const h2Element = document.getElementById("antiguedadCE");
 			h2Element.innerHTML = fechaFormateada;
 		}

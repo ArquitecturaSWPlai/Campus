@@ -102,3 +102,22 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+    
+class UsuarioAcademic(models.Model):
+    id_alumno = models.IntegerField(blank = True,null= True)
+    curp = models.CharField(max_length=18,blank = True,null= True)
+    nombre = models.CharField(max_length=200,blank = True,null= True)
+    apellido_paterno = models.CharField(max_length=200,blank = True,null= True)
+    apellido_materno = models.CharField(max_length=200,blank = True,null= True)
+    correo_electronico = models.CharField(max_length=100,blank = True,null= True)
+    matricula = models.CharField(max_length=11,blank = True,null= True)
+    fecha_ingreso = models.CharField(max_length=30,null= True,blank=True)
+    oferta_educativa = models.TextField(blank=True,null= True)
+    periodo= models.CharField(max_length=50,null= True,blank=True)
+    fecha_inicio_periodo = models.CharField(max_length=30,null= True,blank=True)
+    fecha_fin_periodo = models.CharField(max_length=30,null= True,blank=True)
+    estatus = models.TextField(blank=True,null= True)
+
+    class Meta:
+        managed = False
+        db_table = 'usuarios_usuarioacademic'
