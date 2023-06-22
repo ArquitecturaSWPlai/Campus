@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 import json
+from django.http import JsonResponse
 import concurrent.futures as thread_request
 from django.shortcuts import render
 from .models import UserProfile, UsuarioAcademic
@@ -76,7 +77,7 @@ def updateAcademicStudents(page):
             _ = UsuarioAcademic.objects.bulk_create(Alumno)
     return route
 
-def thread_processing_students():
+def thread_processing_students(request):
     initial_route = "https://apis.academic.lat/v3/schoolControl/students?onlyCurrentStudents=false&pageNumber=1&rowsPerPage=200"
     temporal_route = initial_route
     respuesta_inicial = getAcademicStudents(temporal_route)
@@ -89,3 +90,7 @@ def thread_processing_students():
         for future in thread_request.as_completed(futures):
             result = future.result()
             print(result)
+
+    return JsonResponse({
+        'respuesta': 'usuarios actualizados'
+    })

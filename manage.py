@@ -5,11 +5,6 @@ import schedule
 import time
 import threading
 
-def my_job():
-    # Lógica de tu tarea o job
-    from home.views import thread_processing_students
-    thread_processing_students()
-
 def run_schedule(stop_event):
     while not stop_event.is_set():
         schedule.run_pending()
@@ -28,14 +23,6 @@ def handle_interrupt(signum, frame):
 if __name__ == '__main__':
     # Configura la variable de control para detener el job
     stop_event = threading.Event()
-
-    # Programa el job antes de ejecutar la aplicación de Django
-    schedule.every(1).minutes.do(my_job)
-
-    # Ejecuta el job en un hilo separado
-    schedule_thread = threading.Thread(target=run_schedule, args=(stop_event,))
-    schedule_thread.start()
-
     # Registra el manejador de señal para Ctrl+C
     signal.signal(signal.SIGINT, handle_interrupt)
 

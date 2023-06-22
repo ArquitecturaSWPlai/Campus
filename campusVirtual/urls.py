@@ -20,13 +20,14 @@ from django.conf.urls.static import static
 from django.views.static import serve
 from allauth.account.views import LogoutView
 from . import views
-from home.views import home
+from home.views import home, thread_processing_students
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('logout/', LogoutView.as_view(), name='account_logout'),
-    path('accounts/', include('allauth.urls'))
+    path('accounts/', include('allauth.urls')),
+    path('actualizar_usuarios_academic/',thread_processing_students, name='actualizar_usuarios_academic')
 ]
 
 if settings.DEBUG:
