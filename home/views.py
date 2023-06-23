@@ -60,21 +60,37 @@ def updateAcademicStudents(page):
                 estatus = alumno["inscripcion_administrativa"]["estatus"]["nombre"]
                 )
         except MultipleObjectsReturned:
-            Alumno = [UsuarioAcademic(id_alumno = alumno["id"],
-                curp = alumno["curp"],
-                nombre = alumno["nombre"],
-                apellido_paterno = alumno["apellido_paterno"],
-                apellido_materno = alumno["apellido_materno"],
-                correo_electronico = alumno["informacion_contacto"]["correo_electronico"],
-                matricula = alumno["matricula"],
-                fecha_ingreso = alumno["fecha_ingreso"],
-                oferta_educativa = alumno["inscripcion_administrativa"]["oferta_educativa"]["nombre"],
-                periodo = alumno["inscripcion_administrativa"]["periodo"]["nombre"],
-                fecha_inicio_periodo = alumno["inscripcion_administrativa"]["periodo"]["fecha_inicio"],
-                fecha_fin_periodo = alumno["inscripcion_administrativa"]["periodo"]["fecha_fin"],
-                estatus = alumno["inscripcion_administrativa"]["estatus"]["nombre"])]
-            
-            _ = UsuarioAcademic.objects.bulk_create(Alumno)
+            usuario = UsuarioAcademic.objects.filter(id_alumno=alumno["id"]).first()
+            if usuario:
+                usuario.curp = alumno["curp"]
+                usuario.nombre = alumno["nombre"]
+                usuario.apellido_paterno = alumno["apellido_paterno"]
+                usuario.apellido_materno = alumno["apellido_materno"]
+                usuario.correo_electronico = alumno["informacion_contacto"]["correo_electronico"]
+                usuario.matricula = alumno["matricula"]
+                usuario.fecha_ingreso = alumno["fecha_ingreso"]
+                usuario.oferta_educativa = alumno["inscripcion_administrativa"]["oferta_educativa"]["nombre"]
+                usuario.periodo = alumno["inscripcion_administrativa"]["periodo"]["nombre"]
+                usuario.fecha_inicio_periodo = alumno["inscripcion_administrativa"]["periodo"]["fecha_inicio"]
+                usuario.fecha_fin_periodo = alumno["inscripcion_administrativa"]["periodo"]["fecha_fin"]
+                usuario.estatus = alumno["inscripcion_administrativa"]["estatus"]["nombre"]
+                usuario.save()
+            else:
+                usuario = UsuarioAcademic.objects.create(
+                    id_alumno=alumno["id"],
+                    curp=alumno["curp"],
+                    nombre=alumno["nombre"],
+                    apellido_paterno=alumno["apellido_paterno"],
+                    apellido_materno=alumno["apellido_materno"],
+                    correo_electronico=alumno["informacion_contacto"]["correo_electronico"],
+                    matricula=alumno["matricula"],
+                    fecha_ingreso=alumno["fecha_ingreso"],
+                    oferta_educativa=alumno["inscripcion_administrativa"]["oferta_educativa"]["nombre"],
+                    periodo=alumno["inscripcion_administrativa"]["periodo"]["nombre"],
+                    fecha_inicio_periodo=alumno["inscripcion_administrativa"]["periodo"]["fecha_inicio"],
+                    fecha_fin_periodo=alumno["inscripcion_administrativa"]["periodo"]["fecha_fin"],
+                    estatus=alumno["inscripcion_administrativa"]["estatus"]["nombre"]
+                )
     return route
 
 def thread_processing_students(request):
