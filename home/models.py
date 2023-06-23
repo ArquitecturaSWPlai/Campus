@@ -105,7 +105,7 @@ class UserProfile(models.Model):
     
 class UsuarioAcademic(models.Model):
     id_alumno = models.IntegerField(blank = True,null= True)
-    curp = models.CharField(max_length=18,blank = True,null= True)
+    curp = models.CharField(max_length=255,blank = True,null= True)
     nombre = models.CharField(max_length=200,blank = True,null= True)
     apellido_paterno = models.CharField(max_length=200,blank = True,null= True)
     apellido_materno = models.CharField(max_length=200,blank = True,null= True)
