@@ -44,7 +44,7 @@ def updateAcademicStudents(page):
 
     for alumno in respuesta["informacion"]:
         try:
-            _, created = UsuarioAcademic.objects.update_or_create(
+            usuario, created = UsuarioAcademic.objects.update_or_create(
                 id_alumno = alumno["id"],
                 curp = alumno["curp"],
                 nombre = alumno["nombre"],
