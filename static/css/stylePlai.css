@@ -852,16 +852,3 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
 .nombreCE {
   color: #4d4d4d !important;
 }
-
-.fc-direction-ltr .fc-daygrid-event.fc-event-end:hover, .fc-daygrid-event.fc-event-start:hover {
-  border-radius: 5px !important;
-  background: #003357 !important;
-  width: fit-content !important;
-  z-index: 100 !important;
-  padding-left: 9px;
-  padding-right: 9px;
-  border: 3px solid white;
-  left: -20%;
-  font-size: initial;
-  box-shadow: 3px -1px 20px 15px #ffffff59;
-}

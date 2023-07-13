@@ -1985,6 +1985,7 @@ License: For each use you must have a valid license purchased only from above li
 			imagen_Profile();
 			// Obtenemos la referencia del carrusel
 			var myCarousel = document.querySelector('#myCarousel')
+
 			// Creamos un objeto de carrusel de Bootstrap
 			var carousel = new bootstrap.Carousel(myCarousel, {
 				interval: 2000 // Cambiar el tiempo de transición de las imágenes en milisegundos
@@ -2005,15 +2006,15 @@ License: For each use you must have a valid license purchased only from above li
 					})
 					.then(data => {
 						if (data.imagen.imagen_profile){
-							var img = document.querySelector("#imagen_profile");
+							var img = document.querySelector("#imagen_profile")
+							console.log(data.imagen.imagen_profile);
 							img.setAttribute("src", "/media/"+data.imagen.imagen_profile);
 						}
 						
-					});
+					})
+
 				}
 			}
-			
-		
 
 		var bodyAssignment = ``;
 		// var webP = `pruebacampus`; // PRUEBAS pruebacampus.plai.mx
@@ -2110,10 +2111,7 @@ License: For each use you must have a valid license purchased only from above li
 		const buscarIdMoodle = () => {
 			const emailUser = `{{request.user.email}}`;
 			// const emailUser = 'jemina.desantos@plai.mx';
-			// const emailUser = 'pb_renteria@yahoo.com.mx';
 			// const emailUser = 'daniel.romo@plai.mx';
-			// const emailUser = 'jesus.arreola@plai.mx';
-			
 			let calendarEl = document.getElementById('calendar');
 			let calendar = new FullCalendar.Calendar(calendarEl, {
 				initialView: 'dayGridMonth',
@@ -2322,41 +2320,8 @@ License: For each use you must have a valid license purchased only from above li
 											}).catch(function (error) {
 											});
 
-											var fechaActualMonthly = new Date();
-											for (var i = 4; i >= 0; i--) {
-												var mesActual = new Date();
-												mesActual.setMonth(fechaActualMonthly.getMonth() - i);
-												var numeroMes = (mesActual.getMonth()).toString(); // Formatear el número del mes
-												var anioActual = mesActual.getFullYear();
 
-												const core_calendar_get_calendar_monthly_view = `https://${webP}.plai.mx/webservice/rest/server.php?wstoken=${token}&wsfunction=core_calendar_get_calendar_monthly_view&moodlewsrestformat=json&year=${anioActual}&month=${numeroMes}&courseid=${resCourses[curso].id}`;
-												fetch(core_calendar_get_calendar_monthly_view)
-												.then(response => response.json())
-												.then(dataCalendar => {
-													for (const semana in dataCalendar.weeks) {
-														for (const dia in dataCalendar.weeks[semana].days) {
-															if (dataCalendar.weeks[semana].days[dia].events.length > 0) {
-																for (const evento in dataCalendar.weeks[semana].days[dia].events) {
 
-																	const date = new Date(dataCalendar.weeks[semana].days[dia].events[evento].timestart * 1000);
-																	const year = date.getFullYear();
-																	const month = ("0" + (date.getMonth() + 1)).slice(-2);
-																	const day = ("0" + date.getDate()).slice(-2);
-																	const formattedDate = year + "-" + month + "-" + day;
-																	var newEvent = {
-																		title: dataCalendar.weeks[semana].days[dia].events[evento].name, 
-																		start: formattedDate,
-																		url: dataCalendar.weeks[semana].days[dia].events[evento].url
-																	};
-																	calendar.addEvent(newEvent);
-																}
-															}
-														}
-													}
-													
-												}).catch(function (error) {
-												});
-											}
 										getAssigments(resCourses[curso].id, resCourses[curso].displayname);
 									}
 									// }
@@ -2373,8 +2338,6 @@ License: For each use you must have a valid license purchased only from above li
 						}).catch(function (error) {
 						});
 				});
-
-			
 		}
 
 		const getAssigments = async (idCourse, nameCourse) => {
@@ -2416,7 +2379,7 @@ License: For each use you must have a valid license purchased only from above li
 								</p>
 							`;
 							document.getElementById('bodyAssginment').innerHTML = bodyAssignment;
-							
+
 							// Crear un objeto Date a partir del timestamp UNIX
 							const fecha = new Date(unixTimestamp * 1000);
 							// Configurar la zona horaria a GMT-6
@@ -2444,6 +2407,163 @@ License: For each use you must have a valid license purchased only from above li
 			  })
 			  .then(response => response.json())
 			    .then(res => {
+					let simulate2Res = {
+							"count": 24,
+							"next": "https://aprender.plai.mx/api_programa/programas/?limit=10&offset=10",
+							"previous": null,
+							"results": [
+								{
+									"pk": 61,
+									"titulo": "1A067-023 VIVE LA REALIDAD VIRTUAL EN PLAI",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/portada_4Ct4ki4.png",
+									"descripcion_general": "<p>En la actualidad, ha incrementado el inter&eacute;s por el campo de la realidad virtual y m&aacute;s porque este tipo de tecnolog&iacute;a se puede vincular con diversos proyectos y &aacute;reas de conocimiento, desde el sector p&uacute;blico, de salud y educativo, hasta los temas vinculados al emprendedurismo y la innovaci&oacute;n. Por estas razones, surge el presente taller enfocado en crear experiencias interactivas de VR&nbsp;con acompa&ntilde;amiento personalizado y mediante dispositivos m&oacute;viles, simuladores y visores especiales.</p>",
+									"eje_tematico": {
+										"eje_tematico": "Industria 4.0"
+									},
+									"tipo": {
+										"tipo": "Taller"
+									},
+									"fecha_fin": "2023-02-16"
+								},
+								{
+									"pk": 79,
+									"titulo": "3B146-001 SAT PARA EMPRENDEDORAS",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/portada_1.png",
+									"descripcion_general": "<p>Las participantes aprender&aacute;n los conocimientos b&aacute;sicos para formalizar su empresa ante el SAT.</p>",
+									"eje_tematico": {
+										"eje_tematico": "Innovación y emprendimiento"
+									},
+									"tipo": {
+										"tipo": "Curso"
+									},
+									"fecha_fin": "2023-05-27"
+								},
+								{
+									"pk": 8,
+									"titulo": "4E060-001 PROGRAMA PLAI EDX: ONLINE CAMPUS ESSENTIALS",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/portadilla_CV_edX.png",
+									"descripcion_general": "<p>Obt&eacute;n acceso a m&aacute;s de 100 cursos seleccionados en los temas m&aacute;s demandados y emergentes para el &eacute;xito acad&eacute;mico y profesional actual.&nbsp; <strong>Inscr&iacute;bete ahora.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Para acceder&nbsp;sigue estos pasos: ​&nbsp;</p>\r\n\r\n<ol>\r\n\t<li style=\"list-style-type:decimal\">Inscr&iacute;bete y espera tu correo de invitaci&oacute;n por parte de edX.&nbsp;</li>\r\n\t<li style=\"list-style-type:decimal\">Crea tu cuenta. Busca los cursos de tu inter&eacute;s e inscr&iacute;bete.&nbsp;</li>\r\n\t<li style=\"list-style-type:decimal\">Encontrar&aacute;s cursos de niveles: principiante, intermedio y avanzado.&nbsp;</li>\r\n\t<li style=\"list-style-type:decimal\">Organiza tus tiempos y horarios.&nbsp;</li>\r\n\t<li style=\"list-style-type:decimal\">Tendr&aacute;s hasta el 29 de junio de 2024 para completarlos. Finaliza con &eacute;xito tus cursos y <strong>obt&eacute;n tu certificados sin costo.</strong></li>\r\n</ol>\r\n\r\n<p>Prep&aacute;rate ahora en las habilidades del futuro. Inscr&iacute;bete en este programa ahora.</p>",
+									"eje_tematico": {
+										"eje_tematico": "Tecnologías de la información"
+									},
+									"tipo": {
+										"tipo": "Programa"
+									},
+									"fecha_fin": "2024-06-29"
+								},
+								{
+									"pk": 65,
+									"titulo": "1B036-005 ENGLISH & INNOVATION. INTERMEDIATE COURSE",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/photo_4947643510442535803_y.jpg",
+									"descripcion_general": "<p>Este curso aborda contenidos sobre tecnolog&iacute;a, innovaci&oacute;n y emprendimiento. Las tem&aacute;ticas centrales se manifiestan en cada competencia espec&iacute;fica.</p>",
+									"eje_tematico": {
+										"eje_tematico": "Soft skills"
+									},
+									"tipo": {
+										"tipo": "Curso"
+									},
+									"fecha_fin": "2023-05-18"
+								},
+								{
+									"pk": 55,
+									"titulo": "3B055-029 HABILIDADES DIGITALES #ELLAHACEHISTORIA",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/portada.png",
+									"descripcion_general": "<p>Aprende las herramientas que proporciona Meta para promocionar&nbsp;tu negocio en redes sociales&nbsp;</p>",
+									"eje_tematico": {
+										"eje_tematico": "Innovación y emprendimiento"
+									},
+									"tipo": {
+										"tipo": "Taller"
+									},
+									"fecha_fin": "2023-02-11"
+								},
+								{
+									"pk": 66,
+									"titulo": "1B010-009 ENGLISH FOR SOFT SKILLS AT WORK. ADVANCED COURSE",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/photo_5100671060600269412_y_COaDZmh.jpg",
+									"descripcion_general": "<p>&nbsp;</p>\r\n\r\n<p>Este curso busca mejorar el desempe&ntilde;o verbal y escrito en ingl&eacute;s y desarrollar habilidades de comunicaci&oacute;n aplicadas a ambientes laborales y acad&eacute;micos.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>",
+									"eje_tematico": {
+										"eje_tematico": "Soft skills"
+									},
+									"tipo": {
+										"tipo": "Curso"
+									},
+									"fecha_fin": "2023-03-30"
+								},
+								{
+									"pk": 63,
+									"titulo": "2C028-003 TRANSVERSALIDAD DEL CAMBIO CLIMÁTICO EN EL GOBIERNO DEL ESTADO DE JALISCO",
+									"dependencia": "SEM",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/postal_aprender_SEMADET.png",
+									"descripcion_general": "<p>Este diplomado surge de la necesidad para fortalecer las capacidades de las y los funcionarios p&uacute;blicos del Gobierno del Estado de Jalisco, que mediante la Comisi&oacute;n Interinstitucional de Cambio Clim&aacute;tico (CICC), remarca su compromiso para lograr las metas del Acuerdo de Par&iacute;s. Por esta raz&oacute;n, la Secretar&iacute;a de Medio Ambiente y Desarrollo Sustentable (SEMADET) y la Secretar&iacute;a de Innovaci&oacute;n, Ciencia y Tecnolog&iacute;a (SICyT), a trav&eacute;s de la Plataforma Abierta de Innovaci&oacute;n y de Desarrollo de Jalisco (PLAi) se coordinaron para la realizaci&oacute;n de este programa.</p>",
+									"eje_tematico": {
+										"eje_tematico": "Innovación y emprendimiento"
+									},
+									"tipo": {
+										"tipo": "Diplomado"
+									},
+									"fecha_fin": "2023-06-22"
+								},
+								{
+									"pk": 80,
+									"titulo": "3A059-001 ORACLE CLOUD INFRASTRUCTURE FOUNDATIONS I",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/portada_SJto3w1.png",
+									"descripcion_general": "<p>Este curso aborda conceptos b&aacute;sicos, t&eacute;rminos e ideas centrales de la infraestructura de ORACLE Cloud en cuatro ejes: Core Infrastructure, Database, Solutions, Platform and Edge y Governance and Administration.</p>",
+									"eje_tematico": {
+										"eje_tematico": "Tecnologías de la información"
+									},
+									"tipo": {
+										"tipo": "Curso"
+									},
+									"fecha_fin": "2023-07-19"
+								},
+								{
+									"pk": 50,
+									"titulo": "3B039-017 PROGRAMA BÁSICO DE INCLUSIÓN DIGITAL",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/portada_sandbox_inclusion_digital.png",
+									"descripcion_general": "<p>Este curso ofrece contenido digital para un aprendizaje autogestivo y muestra el uso de herramientas digitales de forma productiva, responsable y segura.</p>\r\n\r\n<p>&nbsp;</p>",
+									"eje_tematico": {
+										"eje_tematico": "Tecnologías de la información"
+									},
+									"tipo": {
+										"tipo": "Curso"
+									},
+									"fecha_fin": "2023-03-10"
+								},
+								{
+									"pk": 62,
+									"titulo": "1A082-084 TALLER CREA TU ROBOT EN PLAI",
+									"dependencia": "P",
+									"estatus": "Activo",
+									"imagen_programa": "https://aprender.plai.mx/media/programas/imagenes/portada_taller_robotica23.png",
+									"descripcion_general": "<p>&quot;PLAi en su deber de contribuir y acelerar la capacitaci&oacute;n de capital humano para cubrir las demandas de los trabajos actuales y del futuro en Jalisco, impulsando la competitividad del sector productivo y promoviendo la innovaci&oacute;n, realiz&oacute; un taller de Rob&oacute;tica para conocer su esencia y aplicaciones.</p>",
+									"eje_tematico": {
+										"eje_tematico": "Industria 4.0"
+									},
+									"tipo": {
+										"tipo": "Taller"
+									},
+									"fecha_fin": "2023-02-15"
+								}
+							]
+						}
 					let bodyAprenderCourse = '';
 					let bodyMyCourses = '';
 					let cont = 0;
