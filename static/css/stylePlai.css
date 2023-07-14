@@ -852,3 +852,61 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
 .nombreCE {
   color: #4d4d4d !important;
 }
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end:hover, .fc-daygrid-event.fc-event-start:hover {
+  border-radius: 5px !important;
+  background: #003357 !important;
+  width: fit-content !important;
+  z-index: 100 !important;
+  padding-left: 9px;
+  padding-right: 9px;
+  border: 3px solid white;
+  left: -20%;
+  font-size: initial;
+  box-shadow: 3px -1px 20px 15px #ffffff59;
+}
+
+.containerLogin {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loginDiv {
+  background: white !important;
+  border-radius: 20px;
+  width: 623px !important;
+}
+
+.btnLogin {
+  display: inline-flex;
+  padding: 9px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 6px;
+  background: #19ACA7;
+  color: white;
+}
+
+.btnLogin:hover {
+  background: #158f8b !important;
+  color: white;
+}
+
+.welcomeText {
+  padding-top: 13% !important;
+  font-size: 32px;
+}
+
+.welcomeAdvise {
+  color: var(--gray-gray-500, #A1A5B7);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px; /* 115% */
+}
+
+.imgLogin {
+  position: absolute;
+}
