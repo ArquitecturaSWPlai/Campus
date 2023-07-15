@@ -386,7 +386,7 @@ License: For each use you must have a valid license purchased only from above li
 
 
 
-									{% if not request.user.is_authenticated %}
+									{% if request.user.is_authenticated %}
 										<!--begin::User menu-->
 										<div class="app-navbar-item ms-1 ms-md-3" style=" display: flex !important; align-items: center;" id="kt_header_user_menu_toggle">
 											<!--begin::Menu wrapper-->
@@ -511,7 +511,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Menu-->
 							<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu"
 								data-kt-menu="true" data-kt-menu-expand="false">
-								{% if not request.user.is_authenticated %}
+								{% if request.user.is_authenticated %}
 									<!--begin:Menu item-->
 									<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
 										<!--begin:Menu link-->
@@ -682,7 +682,7 @@ License: For each use you must have a valid license purchased only from above li
 				<!--begin::Main-->
 				<div class="app-main flex-column flex-row-fluid bg-gray-300" id="kt_app_main">
 
-					{% if not request.user.is_authenticated %}
+					{% if request.user.is_authenticated %}
 					<!--begin::Appcampus wrapper-->
 					<div id="Appcampus" class="d-flex flex-column flex-column-fluid">
 						<!--begin::Toolbar-->
