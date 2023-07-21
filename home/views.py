@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 import json
-from django.http import JsonResponse
-import concurrent.futures as thread_request, HttpResponseRedirect
+from django.http import JsonResponse,  HttpResponseRedirect
+import concurrent.futures as thread_request
 from django.shortcuts import render
 from .models import UserProfile, UsuarioAcademic
 import requests as fetch
