@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 import json
 from django.http import JsonResponse
-import concurrent.futures as thread_request
+import concurrent.futures as thread_request, HttpResponseRedirect
 from django.shortcuts import render
 from .models import UserProfile, UsuarioAcademic
 import requests as fetch
@@ -27,6 +27,8 @@ def buscar_alumno(request):
             return alumnoAcademic
     else:
         return None
+def redirect_moodle(request):
+    return HttpResponseRedirect('https://cursos.plai.mx/')
 
 
 def getAcademicStudents(route):
