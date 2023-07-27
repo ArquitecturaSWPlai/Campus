@@ -401,18 +401,14 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Menu item-->
 											<div class="menu-item px-3">
 												<div class="menu-content d-flex align-items-center px-3">
-													<!--begin::Avatar-->
-													<div class="symbol symbol-50px me-5">
-														<img alt="Logo" src="{% static 'img/logotipoPlaiNvo1.png' %}" />
-													</div>
-													<!--end::Avatar-->
 													<!--begin::Username-->
 													<div class="d-flex flex-column">
 														<div class="fw-bold fs-8 d-flex align-items-center">
 															{{ request.user.username }}
 														</div>
-														<a href="#"
-															class="fw-semibold text-muted text-hover-primary fs-7">{{request.user.email}}</a>
+														<a href="#" style=" font-size: small !important;" class="fw-semibold text-muted text-hover-primary fs-7">
+															{{request.user.email}}
+														</a>
 													</div>
 													<!--end::Username-->
 												</div>
@@ -1037,7 +1033,7 @@ License: For each use you must have a valid license purchased only from above li
 
 
 											<!--begin::Col Tabla cursos disponibles plai -->
-											<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+											<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
 												<!--begin::Tables Widget 1-->
 												<div class="card card-xl-stretch mb-xl-8 ">
 													<!--begin::Header-->
@@ -1050,8 +1046,8 @@ License: For each use you must have a valid license purchased only from above li
 													<!--end::Header-->
 													<!--begin::Body-->
 													<div class="card-body">
-														<div class="row">
-															<div id="myCarousel" class="carousel slide"
+														<div class="row d-flex justify-content-center">
+															<div id="myCarousel" class="carousel slide" style=" max-width: 500px; "
 																data-bs-ride="carousel">
 																<ol class="carousel-indicators" id="liCarousel">
 																</ol>
@@ -2636,7 +2632,7 @@ License: For each use you must have a valid license purchased only from above li
                                     <tr>
                                         <th>
                                             <div class="symbol symbol-50px me-2">
-                                                <span class="fw-bold fs-9">${resCourses[curso].displayname}</span>
+                                                <span class="fw-bold fs-9">${resCourses[curso].shortname}</span>
                                             </div>
                                         </th>
                                         <!--
@@ -2665,7 +2661,7 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                         </td>
                                 </tr>`;
-								var trimmedDisplayName = resCourses[curso].displayname.slice(0, 50);
+								var trimmedDisplayName = resCourses[curso].shortname.slice(0, 50);
 								var pst = trimmedDisplayName.length < 50 ? "" : "...";
 									if (contadorCursos <= 6) {
 										bodyMyCoursesMoodle += `
@@ -2682,7 +2678,7 @@ License: For each use you must have a valid license purchased only from above li
 
 																				<div class="bodyCardTitle">
 																					<span style=" color: gray; ">Curso</span> </br>
-																					<span class="ejesTematicos" style=" font-size: small;font-weight: 700; " title="${resCourses[curso].displayname}">${trimmedDisplayName} ${pst}</span>
+																					<span class="ejesTematicos" style=" font-size: small;font-weight: 700; " title="${resCourses[curso].shortname}">${trimmedDisplayName} ${pst}</span>
 																				</div>
 																				<div class="col-12">
 																					<div class="row row p-4">
@@ -2721,7 +2717,7 @@ License: For each use you must have a valid license purchased only from above li
 											<tr>
 												<th>
 													<div class="symbol symbol-50px me-2">
-														<span class="fw-bold fs-9">${resCourses[curso].displayname}</span>
+														<span class="fw-bold fs-9">${resCourses[curso].shortname}</span>
 													</div>
 												</th>
 												<td>
@@ -2827,7 +2823,7 @@ License: For each use you must have a valid license purchased only from above li
 												}).catch(function (error) {
 												});
 											}
-										getAssigments(resCourses[curso].id, resCourses[curso].displayname);
+										getAssigments(resCourses[curso].id, resCourses[curso].shortname);
 									}
 									// }
 								}
@@ -2839,7 +2835,6 @@ License: For each use you must have a valid license purchased only from above li
 							}
 							document.getElementById('bodyCourses').innerHTML = bodyCourses;
 							document.getElementById('bodyEndedCourses').innerHTML = bodyEndedCourses;
-							getCalendarDates(calendarEvents);
 						}).catch(function (error) {
 						});
 				});
@@ -2927,33 +2922,39 @@ License: For each use you must have a valid license purchased only from above li
 							activeCard = '';
 							activeLi = '';
 						}
-						bodyAprenderCourse += `
-							<div class="carousel-item ${activeCard} ">
-								<div class="col-md-12 pt-4">
-									<div class="learn-card-container animate__animated animate__fadeInUp ">
-										<div class="learn-card mb-1" style=" background: #f9f9f9;">
-											<div class="bodyCard p-0">
-												<div class="flip-container" id="fc_">
-													<div class="flipper">
-														<div class="front">
-															<div class="parte1">
-																<div class="tarjetas" style=" height: 150px; background-image: url('${res.results[key].imagen_programa}');"></div>
-																<div class="col-sm-12 m-0 tipoProgramaTitulo row align-items-center">
-																	<div class="col-12 text-center">
-																		<span class="ejesTematicos">${res.results[key].eje_tematico.eje_tematico}</span>
-																	</div>
-																</div>
-																<div class="card-body">
-																	<div class="bodyCardTitle">
-																		<h6 class="titleCard fs-8 text-muted text-muted-plai fw-semibold">${res.results[key].titulo}</h6>
-																	</div>
-																	<div class="col-12">
-																		<div class="row align-items-center">
-																			<div class="col-sm-12 p-0 pt-4">
-																				<a onclick="window.open('https://aprender.plai.mx', '_blank');">
-																					<button type="button"
-																						class="btn btnInscripcion col-12 pts12">Consultar oferta disponible</button>
-																				</a>
+
+						if (res.results[key].dependencia !== 'INGL') {
+							
+							if (cont <= 10) {
+								bodyAprenderCourse += `
+									<div class="carousel-item ${activeCard} ">
+										<div class="col-md-12 pt-4">
+											<div class="learn-card-container animate__animated animate__fadeInUp ">
+												<div class="learn-card mb-1" style=" background: #f9f9f9;">
+													<div class="bodyCard p-0">
+														<div class="flip-container" id="fc_">
+															<div class="flipper">
+																<div class="front">
+																	<div class="parte1">
+																		<div class="tarjetas" style=" height: 150px; background-image: url('${res.results[key].imagen_programa}');"></div>
+																		<div class="col-sm-12 m-0 tipoProgramaTitulo row align-items-center">
+																			<div class="col-12 text-center">
+																				<span class="ejesTematicos">${res.results[key].eje_tematico.eje_tematico}</span>
+																			</div>
+																		</div>
+																		<div class="card-body">
+																			<div class="bodyCardTitle">
+																				<h6 class="titleCard fs-8 text-muted text-muted-plai fw-semibold">${res.results[key].titulo_equivalente}</h6>
+																			</div>
+																			<div class="col-12">
+																				<div class="row align-items-center">
+																					<div class="col-sm-12 p-0 pt-4">
+																						<a onclick="window.open('https://aprender.plai.mx', '_blank');">
+																							<button type="button"
+																								class="btn btnInscripcion col-12 pts12">Consultar oferta disponible</button>
+																						</a>
+																					</div>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
@@ -2965,36 +2966,42 @@ License: For each use you must have a valid license purchased only from above li
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-						`;
-						if (cont <= 5) {
-							bodyMyCourses += `
-								<div class="col-xs-12 col-md-4 pt-4">
-									<div class="learn-card-container animate__animated animate__fadeInUp ">
-										<div class="learn-card mb-1" style=" background: #f9f9f9;">
-											<div class="bodyCard p-0">
-												<div class="flip-container" id="fc_">
-													<div class="flipper">
-														<div class="front">
-															<div class="parte1">
-																<div class="tarjetas" style=" height: 150px; background-image: url('${res.results[key].imagen_programa}');"></div>
-																<div class="col-sm-12 m-0 tipoProgramaTitulo row align-items-center">
-																	<div class="col-12 text-center">
-																		<span class="ejesTematicos">${res.results[key].eje_tematico.eje_tematico}</span>
+								`;
+
+								liCarouselItem += `
+									<li data-bs-target="#myCarousel" data-bs-slide-to="${cont}" ${activeLi} ></li>
+								`;
+							}
+
+
+							if (cont <= 5) {
+								bodyMyCourses += `
+									<div class="col-xs-12 col-md-4 pt-4">
+										<div class="learn-card-container animate__animated animate__fadeInUp ">
+											<div class="learn-card mb-1" style=" background: #f9f9f9;">
+												<div class="bodyCard p-0">
+													<div class="flip-container" id="fc_">
+														<div class="flipper">
+															<div class="front">
+																<div class="parte1">
+																	<div class="tarjetas" style=" height: 150px; background-image: url('${res.results[key].imagen_programa}');"></div>
+																	<div class="col-sm-12 m-0 tipoProgramaTitulo row align-items-center">
+																		<div class="col-12 text-center">
+																			<span class="ejesTematicos">${res.results[key].eje_tematico.eje_tematico}</span>
+																		</div>
 																	</div>
-																</div>
-																<div class="card-body p-5 m-5">
-																	<div class="bodyCardTitle">
-																		<h6 class="titleCard fs-8 text-muted text-muted-plai fw-semibold">${res.results[key].titulo}</h6>
-																	</div>
-																	<div class="col-12 mt-5 pt-5">
-																		<div class="row align-items-center">
-																			<div class="col-sm-12 p-0 pt-4">
-																				<a onclick="window.open('https://aprender.plai.mx', '_blank');">
-																					<button type="button"
-																						class="btn btnInscripcion col-12 pts12">Consultar oferta disponible</button>
-																				</a>
+																	<div class="card-body p-5 m-5">
+																		<div class="bodyCardTitle">
+																			<h6 class="titleCard fs-8 text-muted text-muted-plai fw-semibold">${res.results[key].titulo_equivalente}</h6>
+																		</div>
+																		<div class="col-12 mt-5 pt-5">
+																			<div class="row align-items-center">
+																				<div class="col-sm-12 p-0 pt-4">
+																					<a onclick="window.open('https://aprender.plai.mx', '_blank');">
+																						<button type="button"
+																							class="btn btnInscripcion col-12 pts12">Consultar oferta disponible</button>
+																					</a>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
@@ -3005,13 +3012,11 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>`;
-						}
-						liCarouselItem += `
-							<li data-bs-target="#myCarousel" data-bs-slide-to="${cont}" ${activeLi} ></li>
-						`;
+									</div>`;
+							}
+						
 						cont++;
+						}
 					}
 					document.getElementById('courseItems').innerHTML = bodyAprenderCourse;
 					document.getElementById('liCarousel').innerHTML = liCarouselItem;
