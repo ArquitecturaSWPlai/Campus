@@ -2556,18 +2556,16 @@ License: For each use you must have a valid license purchased only from above li
 
 		function getfechaCE(date, mat) {
 			const fecha = new Date(date);
-			const dia = fecha.getDate() + 1;
+			const dia = fecha.getDate();
 			const mes = fecha.toLocaleString('es-MX', { month: 'long' });
 			const año = fecha.getFullYear();
 			let fechaFormateada = ""
 			fecha_validada = fecha instanceof Date && !isNaN(fecha);
 			if(fecha_validada){ 
 				fechaFormateada = `Miembro desde ${dia} / ${mes} / ${año} <h4 style="color: #ced0d8 !important"> Matrícula: ${mat} </h4>`;
-
 			}
 			else{ 
 				fechaFormateada = `<h4 style="color: #ced0d8 !important"> Matrícula: ${mat} </h4>`;
-				
 			}
 			const h2Element = document.getElementById("antiguedadCE");
 			h2Element.innerHTML = fechaFormateada;
