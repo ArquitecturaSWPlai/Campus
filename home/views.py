@@ -3,14 +3,14 @@ import json
 from django.http import JsonResponse,  HttpResponseRedirect
 import concurrent.futures as thread_request
 from django.shortcuts import render
-from .models import UserProfile, UsuarioAcademic
+from .models import UserProfile, UsuarioAcademic, ConfigApisMoodle
 import requests as fetch
 from django.core.exceptions import MultipleObjectsReturned
 
 def home(request):
     alumnoAcademic = buscar_alumno(request)
-    
-    return render(request, 'dist/index.html', {"json_alumno": alumnoAcademic})
+    configApisMoodle = ConfigApisMoodle.objects.all()
+    return render(request, 'dist/index.html', {"json_alumno": alumnoAcademic,"lista_configuracion_moodle":configApisMoodle})
 
 
 def buscar_alumno(request):

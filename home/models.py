@@ -121,3 +121,8 @@ class UsuarioAcademic(models.Model):
     class Meta:
         managed = False
         db_table = 'usuarios_usuarioacademic'
+
+class ConfigApisMoodle(models.Model):
+    nombre_moodle = models.CharField(max_length=50,null= True,blank=True)
+    endpoint = models.TextField(blank=True,null= True)
+    token = models.TextField(blank=True,null= True)
