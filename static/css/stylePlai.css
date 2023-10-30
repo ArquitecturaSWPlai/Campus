@@ -910,3 +910,109 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
 .imgLogin {
   position: absolute;
 }
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled{
+  cursor: pointer !important;
+  color: #21abcb !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+#tableCourses_next:hover{
+  cursor: pointer !important;
+  color: #21abcb !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.paginate_button:hover{
+  background: #21abcb !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.paginate_button{
+  background: transparent !important;
+  color: #1c8ba4 !important;
+  border-radius: 15px !important;
+}
+
+#tableCourses_next{
+  background: transparent !important;
+  color: #1c8ba4 !important;
+  border-radius: 15px !important;
+}
+#tableEndedCourses_next{
+  background: transparent !important;
+  color: #1c8ba4 !important;
+  border-radius: 15px !important;
+}
+
+.paginate_button.current {
+  border-color: #1c8ba4 !important;
+  color: #1c8ba4 !important;
+}
+
+.paginate_button {
+  color: #1c8ba4 !important;
+}
+
+.paginate_button:hover {
+  background: #1c8ba4 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #1c8ba4 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current{
+  color: #cf1b6b !important;
+  border-color: #cf1b6b !important;
+}
+
+#tableCourses_previous:hover, #tableCourses_next:hover {
+  color: #cf1b6b !important;
+  background: transparent !important;
+}
+
+/* Cambiar el color de fondo del encabezado de la tabla */
+.dataTable thead th {
+  background-color: #fff !important; /* Reemplaza 'tu-color-aqui' con el color que desees */
+}
+
+/* Cambiar el color de fondo de las filas de la tabla */
+.dataTable tbody tr {
+  background-color: #fff !important; /* Reemplaza 'tu-color-aqui' con el color que desees */
+}
+
+/* Cambiar el color de fondo de las celdas de datos */
+.dataTable tbody td {
+  background-color: #fff !important; /* Reemplaza 'tu-color-aqui' con el color que desees */
+}
+
+table.dataTable.display>tbody>tr.odd>.sorting_1, table.dataTable.order-column.stripe>tbody>tr.odd>.sorting_1 {
+  box-shadow: none !important;
+}
+
+table.dataTable.display>tbody>tr.even>.sorting_1, table.dataTable.order-column.stripe>tbody>tr.even>.sorting_1 {
+  box-shadow: 20px 10px 5px red !important;
+}
+
+.even {
+  background: rgb(237, 120, 120) !important;
+}
+
+.odd {
+  background: rgb(116, 227, 89) !important;
+}
