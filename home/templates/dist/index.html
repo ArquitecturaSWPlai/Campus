@@ -1210,7 +1210,7 @@
 												style=" font-weight: 800; background: transparent !important; ">
 												<li class="nav-item" role="presentation">
 													<button class="nav-link active"
-														style=" background: transparent !important; " id="tab1-tab"
+													style="background: white !important;color: #98a1a5;font-weight: 500;" id="tab1-tab"
 														data-bs-toggle="tab" data-bs-target="#tab1" type="button"
 														role="tab" aria-controls="tab1" aria-selected="true">Cursos
 														activos</button>
@@ -1225,12 +1225,12 @@
 											<div class="tab-content p-5" id="myTabContent">
 												<div class="tab-pane fade show active" id="tab1" role="tabpanel"
 													aria-labelledby="tab1-tab">
-													<h3 style=" font-weight: 200; ">Mis cursos</h3>
+													<h3 style="font-weight: 200;color: #336fb3;">Mis cursos</h3>
 													<div class="row row pb-5 " id="bodyCardsMoodle"></div>
 
 													<hr class="pt-5 pb-5">
 
-													<h3 style=" font-weight: 200; ">Cursos disponibles</h3>
+													<h3 style="font-weight: 200;color: #336fb3;">Cursos disponibles</h3>
 													<div class="row" id="bodyCards"></div>
 												</div>
 												<div class="tab-pane fade" id="tab2" role="tabpanel"
@@ -2503,6 +2503,7 @@
 		}
 
 		var bodyAssignment = ``;
+		var bodyMyCoursesMoodle = ``;
 		var webP = `pruebacampus`; // PRUEBAS pruebacampus.plai.mx
 		var token = `50eb47430a24daa3e4b78b42a71948e2`; // PRUEBAS pruebacampus.plai.mx
 
@@ -2643,7 +2644,7 @@
 										</td>
 										<td>
 											<div class="d-flex flex-column w-100 me-2">
-												<a style="cursor: pointer;" onclick="window.open('${element.endpoint}/course/view.php?id=${resUser[0].id}', '_blank');">
+												<a style="cursor: pointer;" onclick="window.open('${element.endpoint}/course/view.php?id=${course.id}', '_blank');">
 													<span class="fs-9" style=" color: #cf1b6b !important;font-weight: 800;">Ver curso</span>
 												</a>
 											</div>
@@ -2679,12 +2680,67 @@
 										</table>
 									</div>
 								</div>`;
+
+							if (course.overviewfiles[0] && course.overviewfiles[0].fileurl) {
+								let urlImagen = course.overviewfiles[0].fileurl;
+								imgCurso = urlImagen.replace('/webservice', '');
+							} else {
+								imgCurso = 'https://cognosnovedades.com/mailings/2020/sc/moodle/banner-moo.png';
+							}
+							var trimmedDisplayName = course.shortname.slice(0, 50);
+							var pst = trimmedDisplayName.length < 50 ? "" : "...";
+							bodyMyCoursesMoodle += `
+								<div class="col-xs-12 col-md-4 pt-4">
+									<div class="learn-card-container  ">
+										<div class="learn-card-Moodle mb-1" style=" background: #f9f9f9;">
+											<div class="bodyCard p-0">
+												<div class="flip-container" id="fc_">
+													<div class="flipper">
+														<div class="front">
+															<div class="parte1">
+																<div class="tarjetas" style=" height: 150px; background-image: url('${imgCurso}');"></div>
+																<div class="card-body card-body p-5">
+
+																	<div class="bodyCardTitle">
+																		<span style=" color: gray; ">Curso</span> </br>
+																		<span class="ejesTematicos" style=" font-size: small;font-weight: 700; " title="${course.shortname}">${trimmedDisplayName} ${pst}</span>
+																	</div>
+																	<div class="col-12">
+																		<div class="row row p-4">
+
+																			<div class="col-sm-12 p-0">
+																				<div class="d-flex flex-stack mb-2">
+																					<span class="fw-bold fs-9">${course.progress}%</span>
+																				</div>
+																				<div class="progress h-10px w-100" style=" background: #dedede; ">
+																					<div class="progress-bar-moodle bg-primary" role="progressbar" style="width: ${course.progress}%" aria-valuenow="${course.progress}" aria-valuemin="0" aria-valuemax="100"></div>
+																				</div>
+																			</div>
+
+																			<div class="col-sm-12 p-0 pt-4 d-flex justify-content-end">
+																				<a onclick="window.open('${course.endpoint}/course/view.php?id=${course.id}', '_blank');">
+																					<button type="button"
+																						class="btn btnContinuar col-12 pts12">Continuar</button>
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>`;
+
 						}
 					}
 				}
 			}
 			document.getElementById('bodyAssginment').innerHTML += bodyAssignment;
-
+			document.getElementById('bodyCardsMoodle').innerHTML += bodyMyCoursesMoodle;
 			if (contadorCompletos === 0) {
 				document.getElementById('containerTableEndedCourses').innerHTML = '<h6 class="text-muted py-5" style=" color: #cf1b6b!important;">Sin cursos finalizados</h6>';
 			} else {
