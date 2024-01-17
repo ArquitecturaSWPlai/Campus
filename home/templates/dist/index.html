@@ -2240,7 +2240,7 @@
 
 					{% else %}
 
-					<div class="container-fluid containerLogin" style='background: url({% static 'img/logoPlai3.png' %}); background-position: center center; background-size: cover; background-repeat: no-repeat; min-height: 80vh;'>
+					<div class="container-fluid containerLogin" style="background: url({% static 'img/logoPlai3.png' %}); background-position: center center; background-size: cover; background-repeat: no-repeat; min-height: 80vh;">
 							<div class="row p-5 d-flex align-items-center" style=" height: 80vh!important; ">
 								<div class="mx-auto p-3 loginDiv" >
 									<img alt="Logo" class="align-items-left imgLogin" src="{% static 'img/logoPlai2.png' %}" height="auto" width="93" />
@@ -2581,12 +2581,13 @@
 
 							let progressType = ``;
 							let progress = 0;
-							const unixTimestamp = course .enddate;
+							console.log("timestamp: ",course.enddate)
+							const unixTimestamp = course.enddate;
 							const date = new Date(unixTimestamp * 1000);
 							const year = date.getFullYear();
 							const month = ('0' + (date.getMonth() + 1)).slice(-2);
 							const day = ('0' + date.getDate()).slice(-2);
-							const formattedDate = `${day}/${month}/${year}`;
+							const formattedDate = unixTimestamp > 0 ? `${day}/${month}/${year}`: "N/A";
 							let getcalendarCourse = {courseId: course.id,endpoint: element.endpoint,token: element.token,id: resUser[0].id,year: yearNow,month: numberMonth};
 							getAllCourses.push(getcalendarCourse);
 							const resMonth = traerCalendarioMensual(getcalendarCourse);
@@ -2718,7 +2719,7 @@
 																			</div>
 
 																			<div class="col-sm-12 p-0 pt-4 d-flex justify-content-end">
-																				<a onclick="window.open('${course.endpoint}/course/view.php?id=${course.id}', '_blank');">
+																				<a onclick="window.open('${element.endpoint}/course/view.php?id=${course.id}', '_blank');">
 																					<button type="button"
 																						class="btn btnContinuar col-12 pts12">Continuar</button>
 																				</a>
