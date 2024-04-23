@@ -141,7 +141,7 @@ body {
 .carousel-indicators > li{
     border-top: 1px solid transparent !important;
     border-bottom: 1px solid transparent !important;
-    background: #005c9d !important;
+    background: #006098 !important;
 }
 
 .mainContainer{
@@ -224,7 +224,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   
   .progress-bar {
-    background-color: #cf1b6b !important;
+    background-color: #00aaa8 !important;
     color: #fff !important;
     height: 30px !important;
     font-weight: 600 !important;
@@ -240,7 +240,7 @@ h4.tituloTarjeta-programaCompleto {
   
   .bodyCard {
     padding: 1em;
-    color: #005c9d !important;
+    color: #006098 !important;
   }
   
   .bodyCardTitleArea {
@@ -253,13 +253,13 @@ h4.tituloTarjeta-programaCompleto {
     font-weight: 600 !important;
   }
   .blueText {
-    color: #005c9d !important;
+    color: #006098 !important;
   }
   .blueBg {
-    background: #005c9d !important;
+    background: #006098 !important;
   }
   .btnInscripcion {
-    background: #bc285e !important;
+    background: #00aaa8 !important;
     color: white !important;
     font-size: small;
     font-weight: 400;
@@ -273,7 +273,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   .tipoProgramaTitulo {
     padding: 0.3em;
-    background: #005c9d;
+    background: #006098;
     color: white;
     height: 64px;
   }
@@ -475,7 +475,7 @@ h4.tituloTarjeta-programaCompleto {
   
   .tipoProgramaTitulo {
     padding: 0.3em;
-    background: #005c9d;
+    background: #006098;
     color: white;
     height: 64px;
   }
@@ -642,17 +642,17 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 .bluePlai {
-  background: #005c9d !important;
+  background: #006098 !important;
   color: white !important;
 }
 
 .bluePlai :hover {
-  background: #005c9db4 !important;
+  background: #006098 !important;
   color: white !important;
 }
 
 .fc-h-event {
-  background: #005c9d !important;
+  background: #006098 !important;
   color: white !important;
   border: 1px solid var(--fc-event-border-color);
   display: block;
@@ -671,7 +671,7 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-  border-bottom: 2px solid #015c9d !important;
+  border-bottom: 2px solid #006098 !important;
 }
 
 .nav-link {
@@ -695,7 +695,7 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 .btnContinuar {
-  background: #015c9d !important;
+  background: #00aaa8 !important;
   color: white !important;
   font-size: small;
   font-weight: 400;
@@ -714,15 +714,15 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 .bluePlai2 {
-  background: #3f9796;
+  background: #e9473f;
 }
 
 .pinkPlai2 {
-  background: #bd285e;
+  background: #00aaa8;
 }
 
 .greenPlai2 {
-  background: #a1c046;
+  background: #fed825;
 }
 
 .learn-card2 {
@@ -735,8 +735,8 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 .espacios-fisicos {
-  border-color: #a2c146 !important;
-  color: #a2c146;
+  border-color: #fed825 !important;
+  color: #595959;
   background: transparent;
   border-radius: 30px;
   font-size: 13px;
@@ -744,19 +744,20 @@ h4.tituloTarjeta-programaCompleto {
   margin: 20px;
   text-align: center;
   min-inline-size: min-content;
-  border: 2px solid #a2c146 !important;
+  border: 2px solid #fed825 !important;
 }
 
 .espacios-fisicos:hover {
-  background-color: #a2c146;
-  color: white;
+  background-color: #fed825;
+  color: #595959;
 }
 
 
 /*  FOOTER START */
 
 .fondoPie {
-  background-color: #1f194a;
+  /* background-color: #1f194a; */
+  background-color: #006098;
   height: auto;
   text-align: center;
 }
@@ -855,7 +856,7 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
 
 .fc-direction-ltr .fc-daygrid-event.fc-event-end:hover, .fc-daygrid-event.fc-event-start:hover {
   border-radius: 5px !important;
-  background: #003357 !important;
+  background: #0175b8 !important;
   width: fit-content !important;
   z-index: 100 !important;
   padding-left: 9px;
@@ -863,7 +864,7 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
   border: 3px solid white;
   left: -20%;
   font-size: initial;
-  box-shadow: 3px -1px 20px 15px #ffffff59;
+  /* box-shadow: 3px -1px 20px 15px #ffffff59; */
 }
 
 .containerLogin {
@@ -884,12 +885,12 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
   align-items: flex-start;
   gap: 10px;
   border-radius: 6px;
-  background: #19ACA7;
+  background: #e9473f;
   color: white;
 }
 
 .btnLogin:hover {
-  background: #158f8b !important;
+  background: #ce4039 !important;
   color: white;
 }
 
@@ -944,45 +945,45 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
 
 .paginate_button{
   background: transparent !important;
-  color: #1c8ba4 !important;
+  color: #00aaa8 !important;
   border-radius: 15px !important;
 }
 
 #tableCourses_next{
   background: transparent !important;
-  color: #1c8ba4 !important;
+  color: #00aaa8 !important;
   border-radius: 15px !important;
 }
 #tableEndedCourses_next{
   background: transparent !important;
-  color: #1c8ba4 !important;
+  color: #00aaa8 !important;
   border-radius: 15px !important;
 }
 
 .paginate_button.current {
-  border-color: #1c8ba4 !important;
-  color: #1c8ba4 !important;
+  border-color: #00aaa8 !important;
+  color: #00aaa8 !important;
 }
 
 .paginate_button {
-  color: #1c8ba4 !important;
+  color: #00aaa8 !important;
 }
 
 .paginate_button:hover {
-  background: #1c8ba4 !important;
+  background: #00aaa8 !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  color: #1c8ba4 !important;
+  color: #00aaa8 !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current{
-  color: #cf1b6b !important;
-  border-color: #cf1b6b !important;
+  color: #00aaa8 !important;
+  border-color: #00aaa8 !important;
 }
 
 #tableCourses_previous:hover, #tableCourses_next:hover {
-  color: #cf1b6b !important;
+  color: #00aaa8 !important;
   background: transparent !important;
 }
 
@@ -1006,7 +1007,7 @@ table.dataTable.display>tbody>tr.odd>.sorting_1, table.dataTable.order-column.st
 }
 
 table.dataTable.display>tbody>tr.even>.sorting_1, table.dataTable.order-column.stripe>tbody>tr.even>.sorting_1 {
-  box-shadow: 20px 10px 5px red !important;
+  box-shadow: none !important;
 }
 
 .even {
