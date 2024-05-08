@@ -1,0 +1,732 @@
+
+.myp-1 {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+.fc-col-header {
+    width: 100% !important;
+}
+
+.table.gy-5 td, .table.gy-5 th {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.linkPlai {
+    cursor: pointer;
+}
+
+.linkPlai:hover {
+    font-weight: 600!important; 
+}
+
+.alignMenuVertical {
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+}
+
+.gorditas {
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    .app-footer {
+        height: auto !important;
+    }
+}
+
+.app-footer {
+    height: auto !important;
+}
+
+
+.destacadosReferencia {
+    color: white !important;
+}
+
+.fc-event-title {
+    font-size: smaller;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+
+.carousel-indicators > li{
+    border-top: 1px solid transparent !important;
+    border-bottom: 1px solid transparent !important;
+    background: #005c9d !important;
+}
+
+/* Principal container*/
+.mainContainer {
+  background-color: #005c9d !important;
+}
+
+/*   TARJETAS    */
+
+h4.tituloTarjeta-programaCompleto {
+    font-family: 'Nutmeg-Bold';
+    font-size: 24px;
+    position: relative;
+    top: 20%;
+    min-inline-size: min-content;
+    font-weight: 600;
+    color: #1a96af;
+  }
+  
+  
+  
+  .learn-card {
+    margin-top: 40px;
+    width: 100%;
+    box-shadow: 3px 7px 13px -8px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 424px;
+  }
+  .learn-card-container > a {
+    text-decoration: none;
+  }
+  .learn-card-container > a:focus {
+    text-decoration: none;
+  }
+  .learn-card-img-container {
+    height: 91px;
+    max-width: 100%;
+    display: flex;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.26);
+    background-color: white;
+  }
+  .learn-card-img {
+    float: left;
+    height: 129px;
+    position: relative;
+    padding: 0em 0em 0em 0em;
+  }
+  
+  img.learn-card-img {
+    vertical-align: middle;
+  }
+  
+  .learn-card-text-container {
+      /* margin: -5px 0px 0px -10px; */
+      background-color: #1D2D50;
+      /* border-radius: 0 0 15px 15px; */
+      /* z-index: -2; */
+      /* padding-left: 0%; */
+      position: relative;
+      /* width: 101%; */
+      padding-top: -3px;
+      padding: 12px;
+      text-align: left;
+      font-size: 13px;
+      color: white;
+      height: 140px;
+  }
+  
+  .white-text {
+    color: white !important;
+  }
+  
+  .progress-bar {
+    background-color: #cf1b6b !important;
+    color: #fff !important;
+    height: 30px !important;
+    font-weight: 600 !important;
+  }
+  
+  .learn-card-text {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: white;
+    margin: 0px 1em 0em 1em;
+    padding: 1em 0 0.8em 0;
+  }
+  
+  .bodyCard {
+    padding: 1em;
+    color: #005c9d !important;
+  }
+  
+  .bodyCardTitleArea {
+    height: 160px !important;
+    max-height: 160px !important;
+  }
+  .titleCard {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+  }
+  .blueText {
+    color: #005c9d !important;
+  }
+  .blueBg {
+    background: #005c9d !important;
+  }
+  .btnInscripcion {
+    background: #bc285e !important;
+    color: white !important;
+    font-size: small;
+    font-weight: 400;
+  }
+  .colorGris {
+    color: #696966;
+  }
+  .saberMas {
+    color: #8bc8de !important;
+    padding-right: 15px !important;
+  }
+  .tipoProgramaTitulo {
+    padding: 0.3em;
+    background: #005c9d;
+    color: white;
+    height: 64px;
+  }
+  .tipoAreaTitulo {
+    padding: 0.3em;
+    background: #009e9c;
+    color: white;
+    height: 64px;
+  }
+  
+  /*
+  flip card
+  */
+  .flipButton {
+    text-align:center;
+    
+  }
+  .flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+  
+      /* border: 1px solid #fff; */
+  }
+  
+  
+  
+  .badge {
+    font-weight: 100 !important;
+  }
+  
+  .preloader {
+    position: absolute;
+    top: 474px;
+    left: 148px;
+  }
+  
+  .descripcionTrasera {
+    font-size: smaller !important;
+  }
+  
+  
+  /*
+  flip card
+  */
+  .flipButton {
+    text-align:center;
+    
+  }
+  .flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+  
+      /* border: 1px solid #fff; */
+  }
+  
+  /*	.flip-container:hover .flipper,  */
+  
+    .flip-container.hover .flipper {
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+      }
+  
+  .flip-container, .front, .back {
+    width: 100%;
+      height: 210px;
+  }
+  
+  .flipper {
+      -webkit-transition: 0.5s;
+      -webkit-transform-style: preserve-3d;
+  
+      -moz-transition: 0.5s;
+      -moz-transform-style: preserve-3d;
+    
+    -o-transition: 0.5s;
+      -o-transform-style: preserve-3d;
+  
+      transition: 0.5s;
+      transform-style: preserve-3d;
+  
+      position: relative;
+  }
+  
+  .front, .back {
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  
+  .front {
+      z-index: 2;
+  }
+  
+  .back {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      background: #fff;
+    z-index: 2;
+  }
+  
+  .front .name {
+      font-size: 2em;
+      display: inline-block;
+      background: rgba(33, 33, 33, 0.9);
+      color: #f8f8f8;
+      font-family: Courier;
+      padding: 5px 10px;
+      border-radius: 5px;
+      bottom: 10px;
+      left: 14%;
+      position: absolute;
+      text-shadow: 0.1em 0.1em 0.05em #333;
+  }
+  
+  .back-logo {
+      position: absolute;
+      top: 20px;
+      left: 45px;
+      width: 160px;
+      height: 117px;
+      background: url(http://davidwalsh.name/demo/logo.png) 0 0 no-repeat;
+  }
+  
+  .back-title {
+      font-weight: bold;
+      color: #00304a;
+      position: absolute;
+      top: 180px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+      font-family: Courier;
+      font-size: 2em;
+   
+  }
+   
+  .back p {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 0 20px;
+    font-family: arial;
+    line-height: 2em;
+  }
+  
+  .name {
+       -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+      backface-visibility: hidden;
+  
+  }  
+  
+  .animate
+  {
+      transition: all 0.1s;
+      -webkit-transition: all 0.1s;
+  }
+  
+  .action-button
+  {
+      /*position: relative;*/
+      padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    /*float: left;*/
+      border-radius: 10px;
+      font-family: 'Pacifico', cursive;
+      font-size: 20px;
+      color: #FFF;
+      text-decoration: none;	
+  }
+  
+  .action-button:active
+  {
+      transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+      border-bottom: 1px solid;
+  } 
+  
+  .parteTrasera {
+    height: 426px !important;
+    background: white !important;
+  }
+  
+  .tipoProgramaTitulo {
+    padding: 0.3em;
+    background: #005c9d;
+    color: white;
+    height: 64px;
+  }
+  .tipoAreaTitulo {
+    padding: 0.3em;
+    background: #009e9c;
+    color: white;
+    height: 64px;
+  }
+  
+  
+  div#tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 26.5em;
+    width: 105%;
+  }
+  div#tarjetasAprendizaje {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 26.5em;
+  width: 105%;
+  }
+  
+  
+  .comprar_btn {
+    font-family: "Nutmeg-Bold";
+    width: 150px;
+    height: 49px;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #213473;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 10px;
+    transition: 0.5s;
+  }
+  
+  .ver_btn {
+    font-family: "Nutmeg-Bold";
+    width: 150px;
+    height: 49px;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #707070;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 10px;
+    transition: 0.5s;
+  }
+  
+  h5.descripcionGeneral {
+    font-family: 'Nutmeg-Bold';
+    padding-top: 5%;
+    font-weight: 800;
+    color: #1a96af;
+    font-size: 30px;
+  }
+  
+  h5.subtituloModelo {
+    font-family: 'Nutmeg-Bold';
+    font-weight: 800;
+    color: #008c93;
+    font-size: 30px;
+    padding-left: 95px;
+  }
+  
+  .colorGris {
+    color: #696966;
+  }
+  .saberMas {
+    color: #8bc8de !important;
+    padding-right: 15px !important;
+  }
+  
+  
+  div#tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 26.5em;
+    width: 105%;
+  }
+  div#tarjetasAprendizaje {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 26.5em;
+  width: 105%;
+  }
+  
+  
+  .contenedorImagenTarjeta {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px 0px 0px 10px;
+    width: 500px;
+    background-position-x: center;
+    box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 26%);
+  }
+  .textoTarjeta {
+    padding: 10px;
+  }
+  .tarjetas {
+    height: 220px;
+    max-width: 100%;
+    background-size: cover;
+    display: flex;
+    word-wrap: break-word;
+    text-align: left;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .tarjetasAprendizaje {
+  height: 220px;
+  max-width: 100%;
+  background-size: cover;
+  display: flex;
+  word-wrap: break-word;
+  text-align: left;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  }
+  .botonTarjeta {
+    padding: 2px;
+    margin-top: 70px;
+  }
+  .tipoPrograma {
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    padding: 3px;
+    font-family: 'Conv_Nutmeg-Regular';
+    text-align: center;
+    color: #1a96af;
+    font-size: 9px;
+  }
+  .lineaColor {
+    border-left: 12px solid #805B98;
+  }
+  
+  .infoMoodle {
+    border-radius: 5px;
+  }
+  
+  .destacadosReferencia {
+    color: white !important;
+  }
+
+#module #collapseExample.collapse:not(.show) {
+    display: block;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.bluePlai {
+  background: #005c9d !important;
+  color: white !important;
+}
+
+.bluePlai :hover {
+  background: #005c9db4 !important;
+  color: white !important;
+}
+
+.fc-h-event {
+  background: #005c9d !important;
+  color: white !important;
+  border: 1px solid var(--fc-event-border-color);
+  display: block;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #005c9d40 !important;
+}
+
+.text-muted-plai {
+  color: #44464b!important;
+}
+
+.no-transition {
+  transition: none !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-bottom: 2px solid #015c9d !important;
+}
+
+.nav-link {
+  color: rgb(51, 51, 51);
+}
+
+.learn-card-Moodle {
+  margin-top: 40px;
+  width: 100%;
+  box-shadow: 3px 7px 13px -8px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 360px;
+}
+
+.progress-bar-moodle {
+  background-color: #015c9d !important;
+  color: #fff !important;
+  height: 30px !important;
+  font-weight: 600 !important;
+}
+
+.btnContinuar {
+  background: #015c9d !important;
+  color: white !important;
+  font-size: small;
+  font-weight: 400;
+}
+
+.whiteBg {
+  background: white !important;
+}
+
+.whiteTxt {
+  color: white !important;
+}
+
+.blueTxt {
+  color: #1d2d50 !important;
+}
+
+.bluePlai2 {
+  background: #3f9796;
+}
+
+.pinkPlai2 {
+  background: #bd285e;
+}
+
+.greenPlai2 {
+  background: #a1c046;
+}
+
+.learn-card2 {
+  margin-top: 40px;
+  width: 100%;
+  box-shadow: 3px 7px 13px -8px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 507px;
+}
+
+.espacios-fisicos {
+  border-color: #a2c146 !important;
+  color: #a2c146;
+  background: transparent;
+  border-radius: 30px;
+  font-size: 13px;
+  width: 250px;
+  margin: 20px;
+  text-align: center;
+  min-inline-size: min-content;
+  border: 2px solid #a2c146 !important;
+}
+
+.espacios-fisicos:hover {
+  background-color: #a2c146;
+  color: white;
+}
+
+
+/*  FOOTER START */
+
+.fondoPie {
+  background-color: #1f194a;
+  height: auto;
+  text-align: center;
+}
+
+img#logoPie1 {
+  width: 240px;
+  height: 90px;
+  padding: 0;
+}
+
+img#logoPie2 {
+  width: 240px;
+  height: 90px;
+  padding: 0;
+}
+
+img#logoPie3 {
+  width: 240px;
+  height: 90px;
+  padding: 0;
+}
+
+img#logoPie4 {
+  width: 240px;
+  height: 90px;
+  padding: 0;
+}
+
+img#logoPie5 {
+  width: 240px;
+  height: 90px;
+  padding: 0;
+}
+
+img#socialPie {
+  width: 30px;
+  padding: 0px;
+  margin: 10px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+p.copyright {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Nutmeg Book";
+  font-weight: 100;
+}
+
+a#avisoPrivacidad, a#noticias, h5.divisor {
+  color: #a6e35f;
+  font-weight: 300;
+  font-family: "Nutmeg Book";
+  padding: 3px;
+  font-size: 13.68px;
+  margin: 0;
+}
+
+/*  FOOTER END */
