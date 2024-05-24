@@ -735,7 +735,7 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 .espacios-fisicos {
-  border-color: #fed825 !important;
+  border-color: #006098 !important;
   color: #595959;
   background: transparent;
   border-radius: 30px;
@@ -744,12 +744,12 @@ h4.tituloTarjeta-programaCompleto {
   margin: 20px;
   text-align: center;
   min-inline-size: min-content;
-  border: 2px solid #fed825 !important;
+  border: 2px solid #006098 !important;
 }
 
 .espacios-fisicos:hover {
-  background-color: #fed825;
-  color: #595959;
+  background-color: #006098;
+  color: #fff;
 }
 
 
@@ -885,12 +885,12 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
   align-items: flex-start;
   gap: 10px;
   border-radius: 6px;
-  background: #e9473f;
+  background: #006098;
   color: white;
 }
 
 .btnLogin:hover {
-  background: #ce4039 !important;
+  background: #034a74 !important;
   color: white;
 }
 
