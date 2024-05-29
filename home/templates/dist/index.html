@@ -842,24 +842,6 @@
 														<!--begin::Item-->
 														<span class="menu-link">
 															<span class="menu-icon">
-																<i class="ki-duotone ki-keyboard fs-2">
-																	<span class="path1"></span>
-																	<span class="path2"></span>
-																	<span class="path3"></span>
-																	<span class="path4"></span>
-																</i>
-															</span>
-															<a onclick="changePage('AppEspaciosVirtuales')">
-																<span class="menu-title linkPlai">Espacios virtuales</span>
-															</a>
-														</span>
-														<!--end::Item-->
-														<!--begin::Separator-->
-														<div class="separator separator-dashed my-2"></div>
-														<!--end::Separator-->
-														<!--begin::Item-->
-														<span class="menu-link">
-															<span class="menu-icon">
 																<i class="ki-duotone ki-information-3">
 																	<i class="path1"></i>
 																	<i class="path2"></i>
@@ -1225,12 +1207,12 @@
 											<div class="tab-content p-5" id="myTabContent">
 												<div class="tab-pane fade show active" id="tab1" role="tabpanel"
 													aria-labelledby="tab1-tab">
-													<h3 style="font-weight: 200;color: #e9473f;">Mis cursos</h3>
+													<h3 style="font-weight: 200;color: #006098;">Mis cursos</h3>
 													<div class="row row pb-5 " id="bodyCardsMoodle"></div>
 
 													<hr class="pt-5 pb-5">
 
-													<h3 style="font-weight: 200;color: #e9473f;">Cursos disponibles</h3>
+													<h3 style="font-weight: 200;color: #006098;">Cursos disponibles</h3>
 													<div class="row" id="bodyCards"></div>
 												</div>
 												<div class="tab-pane fade" id="tab2" role="tabpanel"
@@ -1346,7 +1328,7 @@
 										</div>
 										<button type="button" class="mt-5 btn btn-sm col-md-3 col-sm-6"
 											onclick="window.open('https://plai.academic.lat/', '_blank');"
-											style="background: #e9473f; color: white; width: auto;">Ir a control escolar</button>
+											style="background: #006098; color: white; width: auto;">Ir a control escolar</button>
 									</div>
 								</div>
 							</div>
@@ -1521,7 +1503,6 @@
 						<!--begin::Toolbar-->
 						<div class="container whiteBg p-5">
 							<div class="row">
-								<h2 class="pb-5 blueTxt">Espacios físicos</h2>
 								<p style=" font-size: larger; ">
 									<span>
 										Los espacios físicos de PLAi cuentan con infraestructura de vanguardia, son
@@ -1623,7 +1604,7 @@
 																	<div class="front">
 																		<div class="parte1">
 																			<div class="tarjetas"
-																				style=" height: 220px; background: #595959;background-size: 100%;">
+																				style=" height: 220px; background: #fff;background-size: 100%;">
 																			</div>
 																			<div class="col-sm-12 m-0 tipoProgramaTitulo row align-items-center greenPlai2 p-5">
 																				<div class="col-12 text-center ">
@@ -1713,9 +1694,9 @@
 								<!--3-->
 								<div class="col-sm-12 col-md-4 text-left greenPlai2 px-0">
 									<div class="bodyCardEF">
-										<h4 style="color: #595959;font-size: x-large;font-weight: 400;" class="p-5">Para innovar</h4>
+										<h4 style="color: #fff;font-size: x-large;font-weight: 400;" class="p-5">Para innovar</h4>
 										<div class="col-sm-12 p-0" style=" font-size: unset; " class="p-5">
-											<ul style="color: #595959;margin-left: 10px;padding-left: 23px !important;"
+											<ul style="color: #fff;margin-left: 10px;padding-left: 23px !important;"
 												class="p-2">
 												<li>Aula de Realidad Virtual</li>
 												<li>Laboratorio de Producción Multimedia</li>
@@ -2522,13 +2503,12 @@
 
 		window.onload = async function () {
 			await loadMoodleInfo();
-
 			await getAprenderCourses();
 			await changePage('Appcampus');
 			await imagen_Profile();
 			var myCarousel = document.querySelector('#myCarousel')
 			var carousel = new bootstrap.Carousel(myCarousel, {
-				interval: 2000 // Tiempo de transición de las imágenes en milisegundos
+				interval: 2000
 			})
 		};
 
@@ -2538,6 +2518,7 @@
 			// const emailUser = 'pb_renteria@yahoo.com.mx';
 			// const emailUser = 'daniel.romo@plai.mx';
 			// const emailUser = 'jesus.arreola@plai.mx';
+			//const emailUser = 'leonardo.rodriguez@plai.mx';
 			var configJson = [];
 			let bodyCourses = '';
 			const date = new Date();
@@ -2624,7 +2605,7 @@
 									<td>
 										<div class="d-flex flex-column w-100 me-2">
 											<a style="cursor: pointer;" onclick="window.open('${element.endpoint}/course/view.php?id=${course.id}', '_blank');">
-												<span class="fs-9" style=" color: #e9473f !important;font-weight: 800;">Ver curso</span>
+												<span class="fs-9" style=" color: #006098 !important;font-weight: 800;">Ver curso</span>
 											</a>
 										</div>
 									</td>
@@ -2646,7 +2627,7 @@
 										<td>
 											<div class="d-flex flex-column w-100 me-2">
 												<a style="cursor: pointer;" onclick="window.open('${element.endpoint}/course/view.php?id=${course.id}', '_blank');">
-													<span class="fs-9" style=" color: #e9473f !important;font-weight: 800;">Ver curso</span>
+													<span class="fs-9" style=" color: #006098 !important;font-weight: 800;">Ver curso</span>
 												</a>
 											</div>
 										</td>
@@ -2658,7 +2639,7 @@
 									<a class="linkPlai" id="btnVerMas" onclick="getAssigments('${course.id}', '${course.shortname}', '${element.endpoint}', '${element.token}', 'collapseBody_${index}_${course.id}');"  data-bs-toggle="collapse" data-bs-target="#collapse_${index}_${course.id}" aria-expanded="false" aria-controls="collapseExample">
 										<span class="menu-link">
 											<span class="menu-icon">
-												<i class="ki-duotone ki-teacher fs-2" style=" color: #e9473f;">
+												<i class="ki-duotone ki-teacher fs-2" style=" color: #21abcb;">
 													<span class="path1"></span>
 													<span class="path2"></span>
 													<span class="path3"></span>
@@ -2666,13 +2647,13 @@
 													<span class="path5"></span>
 												</i>
 											</span>
-											<span class="menu-title" style=" color: #e9473f;"><b>${course.shortname}</b></span>
+											<span class="menu-title" style=" color: #21abcb;"><b>${course.shortname}</b></span>
 											<i class="ki-duotone ki-down"></i>
 										</span>
 									</a>
 									<div class="collapse pb-4" id="collapse_${index}_${course.id}">
 										<table class="col-12">
-											<tr style=" color: #fed825 !important; ">
+											<tr style=" color: #006098 !important; ">
 												<th><b>Actividad</b></th>
 												<th><b>Vencimiento</b></th>
 											</tr>
@@ -2743,7 +2724,7 @@
 			document.getElementById('bodyAssginment').innerHTML += bodyAssignment;
 			document.getElementById('bodyCardsMoodle').innerHTML += bodyMyCoursesMoodle;
 			if (contadorCompletos === 0) {
-				document.getElementById('containerTableEndedCourses').innerHTML = '<h6 class="text-muted py-5" style=" color: #e9473f !important;">Sin cursos finalizados</h6>';
+				document.getElementById('containerTableEndedCourses').innerHTML = '<h6 class="text-muted py-5" style=" color: #006098 !important;">Sin cursos finalizados</h6>';
 			} else {
 				document.getElementById('bodyEndedCourses').innerHTML += bodyEndedCourses;
 			}

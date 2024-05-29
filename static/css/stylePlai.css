@@ -224,7 +224,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   
   .progress-bar {
-    background-color: #00aaa8 !important;
+    background-color: #006098 !important;
     color: #fff !important;
     height: 30px !important;
     font-weight: 600 !important;
@@ -259,7 +259,7 @@ h4.tituloTarjeta-programaCompleto {
     background: #006098 !important;
   }
   .btnInscripcion {
-    background: #00aaa8 !important;
+    background: #006098 !important;
     color: white !important;
     font-size: small;
     font-weight: 400;
@@ -695,7 +695,7 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 .btnContinuar {
-  background: #00aaa8 !important;
+  background: #006098 !important;
   color: white !important;
   font-size: small;
   font-weight: 400;
@@ -735,7 +735,7 @@ h4.tituloTarjeta-programaCompleto {
 }
 
 .espacios-fisicos {
-  border-color: #fed825 !important;
+  border-color: #006098 !important;
   color: #595959;
   background: transparent;
   border-radius: 30px;
@@ -744,12 +744,12 @@ h4.tituloTarjeta-programaCompleto {
   margin: 20px;
   text-align: center;
   min-inline-size: min-content;
-  border: 2px solid #fed825 !important;
+  border: 2px solid #006098 !important;
 }
 
 .espacios-fisicos:hover {
-  background-color: #fed825;
-  color: #595959;
+  background-color: #006098;
+  color: #fff;
 }
 
 
@@ -885,12 +885,12 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
   align-items: flex-start;
   gap: 10px;
   border-radius: 6px;
-  background: #e9473f;
+  background: #006098;
   color: white;
 }
 
 .btnLogin:hover {
-  background: #ce4039 !important;
+  background: #034a74 !important;
   color: white;
 }
 
@@ -925,65 +925,65 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled{
   cursor: pointer !important;
-  color: #21abcb !important;
+  color: #006098 !important;
   background: transparent !important;
   border-color: transparent !important;
 }
 
 #tableCourses_next:hover{
   cursor: pointer !important;
-  color: #21abcb !important;
+  color: #0060987a !important;
   background: transparent !important;
   border-color: transparent !important;
 }
 
 .paginate_button:hover{
-  background: #21abcb !important;
+  background: #0060987a !important;
   color: #fff !important;
   border-color: transparent !important;
 }
 
 .paginate_button{
   background: transparent !important;
-  color: #00aaa8 !important;
+  color: #006098 !important;
   border-radius: 15px !important;
 }
 
 #tableCourses_next{
   background: transparent !important;
-  color: #00aaa8 !important;
+  color: #006098 !important;
   border-radius: 15px !important;
 }
 #tableEndedCourses_next{
   background: transparent !important;
-  color: #00aaa8 !important;
+  color: #006098 !important;
   border-radius: 15px !important;
 }
 
 .paginate_button.current {
-  border-color: #00aaa8 !important;
-  color: #00aaa8 !important;
+  border-color: #006098 !important;
+  color: #006098 !important;
 }
 
 .paginate_button {
-  color: #00aaa8 !important;
+  color: #006098 !important;
 }
 
 .paginate_button:hover {
-  background: #00aaa8 !important;
+  background: #006098 !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  color: #00aaa8 !important;
+  color: #006098 !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current{
-  color: #00aaa8 !important;
-  border-color: #00aaa8 !important;
+  color: #006098 !important;
+  border-color: #006098 !important;
 }
 
 #tableCourses_previous:hover, #tableCourses_next:hover {
-  color: #00aaa8 !important;
+  color: #006098 !important;
   background: transparent !important;
 }
 
