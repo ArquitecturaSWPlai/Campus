@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.views.static import serve
 from allauth.account.views import LogoutView
 from . import views
-from home.views import home, thread_processing_students, redirect_moodle
+from home.views import home, thread_processing_students, redirect_moodle, salir
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +28,8 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='account_logout'),
     path('accounts/', include('allauth.urls')),
     path('cursos/', redirect_moodle, name="redirect_moodle"),
-    path('actualizar_usuarios_academic/',thread_processing_students, name='actualizar_usuarios_academic')
+    path('actualizar_usuarios_academic/',thread_processing_students, name='actualizar_usuarios_academic'),
+    path('salir/', salir, name='salir'),
 ]
 
 if settings.DEBUG:
