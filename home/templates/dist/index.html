@@ -103,7 +103,7 @@
 									class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
 									<!--begin:Menu link-->
 									<span class="menu-link">
-										<a onclick="window.open('https://aprender.plai.mx', '_blank');">
+										<a onclick="window.open('http://127.0.0.1:8080/accounts/keycloak/login/', '_blank');">
 											<span class="menu-title">Aprender</span>
 											<span class="menu-arrow d-lg-none"></span>
 										</a>
@@ -127,7 +127,7 @@
 													</i>
 												</span>
 												<a href="">
-													<span class="menu-title" onclick="window.open('https://aprender.plai.mx', '_blank');">Oferta</span>
+													<span class="menu-title" onclick="window.open('http://127.0.0.1:8080/accounts/keycloak/login/', '_blank');">Oferta</span>
 												</a>
 											</span>
 											<!--end:Menu link-->
@@ -138,11 +138,11 @@
 											data-kt-menu-placement="right-start"
 											class="menu-item menu-lg-down-accordion">
 											<!--begin:Menu link-->
-											<span class="menu-link">
+											<span class="menu-link d-none">
 												<span class="menu-icon">
 													<i class="ki-duotone ki-home"></i>
 												</span>
-												<a href="#">
+												<a href="{%url 'home'%}">
 													<span class="menu-title">Campus</span>
 												</a>
 											</span>
@@ -408,7 +408,7 @@
 											<!--end::Menu separator-->
 											<!--begin::Menu item-->
 											<div class="menu-item px-5">
-												<a href="https://aprender.plai.mx/perfil/" class="menu-link px-5">Mi Perfil</a>
+												<a href="http://127.0.0.1:8080/accounts/keycloak/login/?next=/perfil/ " class="menu-link px-5">Mi Perfil</a>
 											</div>
 											<!--end::Menu item-->
 											<!--begin::Menu item-->
