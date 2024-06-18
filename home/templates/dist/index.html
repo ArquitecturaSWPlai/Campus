@@ -418,8 +418,9 @@
 											<!--end::Menu item-->
 										</div>
 										<!--end::User account menu-->
+										
 									{% else %}
-										<div class="menu-item px-5">
+										<div class="menu-item px-5 d-none">
 											<a href="{% provider_login_url 'keycloak' %}" class="menu-link px-5">Iniciar sesión</a>
 										</div>
 									{% endif %}
@@ -2227,7 +2228,7 @@
 								<div class="mx-auto p-3 loginDiv" >
 									<img alt="Logo" class="align-items-left imgLogin" src="{% static 'img/logoPlai2.png' %}" height="auto" width="93" />
 									<div class="row text-center">
-										<h1 class="welcomeText">Bienvenid@ a <br>Campus Virtual</h1>
+										<h1 class="welcomeText">Bienvenid@ a <br>Campus PLAi</h1>
 										<p style=" font-size: larger;" class="welcomeAdvise">
 											Para acceder al contenido es necesario identificarse.
 										</p>
