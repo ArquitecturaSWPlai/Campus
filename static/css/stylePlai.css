@@ -1017,3 +1017,13 @@ table.dataTable.display>tbody>tr.even>.sorting_1, table.dataTable.order-column.s
 .odd {
   background: rgb(116, 227, 89) !important;
 }
+
+#kt_app_sidebar{
+  z-index: 99;
+}
+#kt_app_sidebar_right{
+  z-index: 3;
+}
+#kt_app_header{
+  z-index: 2;
+}

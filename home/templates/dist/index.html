@@ -70,6 +70,7 @@
 							</i>
 						</div>
 					</div>
+					
 					<!--end::Sidebar mobile toggle-->
 					<!--begin::Mobile logo-->
 					<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
@@ -438,6 +439,16 @@
 							<!--end::Menu-->
 
 						</div>
+						
+						<div class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2" title="Show sidebar menu">
+							<div class="btn btn-icon btn-active-color-primary w-35px h-35px"
+								id="kt_app_sidebar_right_mobile_toggle">
+								<i class="ki-duotone ki-abstract-14 fs-2 fs-md-1">
+									<span class="path1"></span>
+									<span class="path2"></span>
+								</i>
+							</div>
+						</div>
 						<!--end::Menu wrapper-->
 					</div>
 					<!--end::Header wrapper-->
@@ -463,14 +474,6 @@
 						</a>
 						<!--end::Logo image-->
 						<!--begin::Sidebar toggle-->
-						<!--begin::Minimized sidebar setup:
-            if (isset($_COOKIE["sidebar_minimize_state"]) && $_COOKIE["sidebar_minimize_state"] === "on") {
-                1. "src/js/layout/sidebar.js" adds "sidebar_minimize_state" cookie value to save the sidebar minimize state.
-                2. Set data-kt-app-sidebar-minimize="on" attribute for body tag.
-                3. Set data-kt-toggle-state="active" attribute to the toggle element with "kt_app_sidebar_toggle" id.
-                4. Add "active" class to to sidebar toggle element with "kt_app_sidebar_toggle" id.
-            }
-        -->
 						<div id="kt_app_sidebar_toggle"
 							class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate active"
 							data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
@@ -665,6 +668,393 @@
 
 				</div>
 				<!--end::Sidebar-->
+
+
+
+
+
+				<!--begin::Sidebar-->
+				<div id="kt_app_sidebar_right" class="app-sidebar flex-column" data-kt-drawer="true"
+					data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}"
+					data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="end"
+					data-kt-drawer-toggle="#kt_app_sidebar_right_mobile_toggle">
+					<!--begin::Logo-->
+					<div class="app-sidebar-logo px-6" id="kt_app_sidebar_right_logo" style="cursor: pointer;">
+						<!--begin::Logo image-->
+						<a href="https://plai.mx/" target="_blank">
+							<img alt="Logo" src="{% static 'img/logotipo_PLAi.png' %}" class="app-sidebar-logo-default"
+								style=" height: 43px; " />
+							<img alt="Logo" id="logoOculto" src="{% static 'img/logotipoPlaiNvo1.png' %}"
+								class="h-20px app-sidebar-logo-minimize" />
+						</a>
+						<!--end::Logo image-->
+						<!--begin::Sidebar toggle-->
+						<div id="kt_app_sidebar_right_toggle"
+							class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate active"
+							data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
+							data-kt-app-sidebar-minimize="on" data-kt-toggle-name="app-sidebar-minimize">
+							<i class="ki-duotone ki-double-left fs-2 rotate-180">
+								<span class="path1"></span>
+								<span class="path2"></span>
+							</i>
+						</div>
+						<!--end::Sidebar toggle-->
+					</div>
+					<!--end::Logo-->
+					<!--begin::sidebar menu-->
+					<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+
+
+						<!--begin::Menu wrapper-->
+						<div id="kt_app_sidebar_right_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5"
+							data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto"
+							data-kt-scroll-dependencies="#kt_app_sidebar_right_logo, #kt_app_sidebar_right_footer"
+							data-kt-scroll-wrappers="#kt_app_sidebar_right_menu" data-kt-scroll-offset="5px"
+							data-kt-scroll-save-state="true">
+
+							<!--begin::Menu-->
+							<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_right_menu"
+								data-kt-menu="true" data-kt-menu-expand="false">
+
+								<!--begin:Menu item-->
+								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+									data-kt-menu-placement="bottom-start"
+									class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+									<!--begin:Menu link-->
+									<span class="menu-link">
+										
+											<span class="menu-title">
+												<a onclick="window.open('https://devaprender.plai.mx/accounts/keycloak/login/', '_blank');">Aprender</a>
+											</span>
+											<span class="menu-arrow d-lg-none"></span>
+										
+									</span>
+									<!--end:Menu link-->
+									<!--begin:Menu sub-->
+									<div
+										class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-250px">
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+											data-kt-menu-placement="right-start"
+											class="menu-item menu-lg-down-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-book-open">
+														<i class="path1"></i>
+														<i class="path2"></i>
+														<i class="path3"></i>
+														<i class="path4"></i>
+													</i>
+												</span>
+												<a href="">
+													<span class="menu-title" onclick="window.open('https://devaprender.plai.mx/accounts/keycloak/login/', '_blank');">Oferta</span>
+												</a>
+											</span>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+										
+									</div>
+									<!--end:Menu sub-->
+								</div>
+								<!--end:Menu item-->
+
+								<!--begin:Menu item-->
+								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+									data-kt-menu-placement="bottom-start"
+									class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+									<!--begin:Menu link-->
+									<span class="menu-link">
+										<span class="menu-title">
+											<a onclick="window.open('https://conectar.plai.mx', '_blank');">Conectar</a>	
+										</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<!--end:Menu link-->
+									<!--begin:Menu sub-->
+									<div
+										class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-250px">
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+											data-kt-menu-placement="right-start"
+											class="menu-item menu-lg-down-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-people">
+														<i class="path1"></i>
+														<i class="path2"></i>
+														<i class="path3"></i>
+														<i class="path4"></i>
+														<i class="path5"></i>
+													</i>
+												</span>
+												<span class="menu-title">Oportunidades</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div
+												class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" onclick="window.open('https://conectar.plai.mx/fondos-financiamiento', '_blank');">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Fondos y financiamiento</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" onclick="window.open('https://conectar.plai.mx/convocatorias', '_blank');">
+														<span class=" menu-bullet">
+														<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Convocatorias</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" onclick="window.open('https://conectar.plai.mx/casos-exito', '_blank');" >
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Casos de éxito</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" onclick="window.open('https://conectar.plai.mx/innovaciones-jalicienses', '_blank');" >
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Innovaciones Jaliscienses</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" onclick="window.open('https://conectar.plai.mx/innovaciones-jalicienses', '_blank');">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Noticias</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" onclick="window.open('https://conectar.plai.mx/eventos', '_blank');" >
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Eventos</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" onclick="window.open('https://conectar.plai.mx/prensa', '_blank');" >
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Prensa</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+											data-kt-menu-placement="right-start"
+											class="menu-item menu-lg-down-accordion">
+											<!--begin:Menu link-->
+											<a onclick="window.open('https://conectar.plai.mx/conecta', '_blank');" >
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-duotone ki-medal-star">
+															<i class="path1"></i>
+															<i class="path2"></i>
+															<i class="path3"></i>
+															<i class="path4"></i>
+														</i>
+													</span>
+													<span class="menu-title">Talento</span>
+												</span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+											data-kt-menu-placement="right-start"
+											class="menu-item menu-lg-down-accordion">
+											<!--begin:Menu link-->
+											<a onclick="window.open('https://conectar.plai.mx/ecosistema', '_blank');" >
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-duotone ki-data">
+															<i class="path1"></i>
+															<i class="path2"></i>
+															<i class="path3"></i>
+															<i class="path4"></i>
+															<i class="path5"></i>
+														</i>
+													</span>
+													<span class="menu-title">Ecosistema</span>
+												</span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+									</div>
+									<!--end:Menu sub-->
+								</div>
+								<!--end:Menu item-->
+
+								<!--begin:Menu item-->
+								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+									data-kt-menu-placement="bottom-start"
+									class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+									<!--begin:Menu link-->
+									<span class="menu-link">
+										<span class="menu-title">
+											<a onclick="window.open('https://innovar.plai.mx', '_blank');">Innovar</a>	
+										</span>
+										<span class="menu-arrow d-lg-none"></span>
+									</span>
+									<!--end:Menu link-->
+									<!--begin:Menu sub-->
+									<div
+										class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-250px">
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+											data-kt-menu-placement="right-start"
+											class="menu-item menu-lg-down-accordion">
+											<!--begin:Menu link-->
+											<a onclick="window.open('https://innovar.plai.mx/accounts/login/?next=/hub/tablero', '_blank');">
+												<span class="menu-link">
+													<span class="menu-icon">
+														<i class="ki-duotone ki-message-programming">
+															<i class="path1"></i>
+															<i class="path2"></i>
+															<i class="path3"></i>
+															<i class="path4"></i>
+														</i>
+													</span>
+													<span class="menu-title">Entrar</span>
+												</span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+									</div>
+									<!--end:Menu sub-->
+								</div>
+								<!--end:Menu item-->
+
+
+								<!--Begin:UserImage item-->
+
+
+									{% if request.user.is_authenticated %}
+										<!--begin::User menu-->
+										<div class="app-navbar-item pt-5 ms-1 ms-md-3" style=" display: flex !important; align-items: center;" id="kt_header_user_menu_toggle">
+											<!--begin::Menu wrapper-->
+											<div class="cursor-pointer pl-5 symbol symbol-40px symbol-md-40px"
+												data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+												data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+												<img id="imagen_profile" src="{% static 'img/logotipoPlaiNvo1.png' %}" style=" background-size: cover; height: 100%; " alt="user" />
+											</div>
+										<!--begin::User account menu-->
+										<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px"
+											data-kt-menu="true">
+											<!--begin::Menu item-->
+											<div class="menu-item px-3">
+												<div class="menu-content d-flex align-items-center px-3">
+													<!--begin::Username-->
+													<div class="d-flex flex-column">
+														<div class="fw-bold fs-8 d-flex align-items-center">
+															{{ request.user.username }}
+														</div>
+														<a href="#" style=" font-size: small !important;" class="fw-semibold text-muted text-hover-primary fs-7">
+															{{request.user.email}}
+														</a>
+													</div>
+													<!--end::Username-->
+												</div>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu separator-->
+											<div class="separator my-2"></div>
+											<!--end::Menu separator-->
+											<!--begin::Menu item-->
+											<div class="menu-item px-5">
+												<a href="https://devaprender.plai.mx/accounts/keycloak/login/?next=/perfil/ " class="menu-link px-5">Mi Perfil</a>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu item-->
+											<div class="menu-item px-5">
+												<a href="{% url 'salir'%}" class="menu-link px-5">Cerrar sesión</a>
+											</div>
+											<!--end::Menu item-->
+										</div>
+										<!--end::User account menu-->
+										
+									{% else %}
+										<div class="menu-item px-5 d-none">
+											<a href="{% provider_login_url 'keycloak' %}" class="menu-link px-5">Iniciar sesión</a>
+										</div>
+									{% endif %}
+
+
+
+
+									<!--end::Menu wrapper-->
+								</div>
+								<!--end::User menu-->
+
+								<!--end:UserImage item-->
+
+
+							</div>
+							<!--end::Menu-->
+						</div>
+						<!--end::Menu wrapper-->
+					</div>
+					<!--end::sidebar menu-->
+
+				</div>
+				<!--end::Sidebar-->
+
+
+
+
+
+
+
+
 				<!--begin::Main-->
 				<div class="app-main flex-column flex-row-fluid bg-gray-300" id="kt_app_main">
 
