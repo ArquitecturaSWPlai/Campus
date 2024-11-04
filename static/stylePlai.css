@@ -76,7 +76,7 @@
 /*   TARJETAS    */
 
 h4.tituloTarjeta-programaCompleto {
-    font-family: 'Nutmeg-Bold';
+    font-family: 'Montserrat-Bold';
     font-size: 24px;
     position: relative;
     top: 20%;
@@ -421,7 +421,7 @@ h4.tituloTarjeta-programaCompleto {
   
   
   .comprar_btn {
-    font-family: "Nutmeg-Bold";
+    font-family: "Montserrat-Bold";
     width: 150px;
     height: 49px;
     font-size: 13px;
@@ -438,7 +438,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   
   .ver_btn {
-    font-family: "Nutmeg-Bold";
+    font-family: "Montserrat-Bold";
     width: 150px;
     height: 49px;
     font-size: 13px;
@@ -455,7 +455,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   
   h5.descripcionGeneral {
-    font-family: 'Nutmeg-Bold';
+    font-family: 'Montserrat-Bold';
     padding-top: 5%;
     font-weight: 800;
     color: #1a96af;
@@ -463,7 +463,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   
   h5.subtituloModelo {
-    font-family: 'Nutmeg-Bold';
+    font-family: 'Montserrat-Bold';
     font-weight: 800;
     color: #008c93;
     font-size: 30px;
@@ -537,7 +537,7 @@ h4.tituloTarjeta-programaCompleto {
     border-radius: 20px;
     border-width: 2px;
     padding: 3px;
-    font-family: 'Conv_Nutmeg-Regular';
+    font-family: 'Montserrat-Regular';
     text-align: center;
     color: #1a96af;
     font-size: 9px;
@@ -725,14 +725,14 @@ p.copyright {
   color: white;
   text-align: center;
   font-size: 12px;
-  font-family: "Nutmeg Book";
+  font-family: "Montserrat";
   font-weight: 100;
 }
 
 a#avisoPrivacidad, a#noticias, h5.divisor {
   color: #a6e35f;
   font-weight: 300;
-  font-family: "Nutmeg Book";
+  font-family: "Montserrat";
   padding: 3px;
   font-size: 13.68px;
   margin: 0;
@@ -743,4 +743,14 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
 body {
   color: red !important;
   background: yellow !important;
+}
+
+#kt_app_sidebar{
+  z-index: 99;
+}
+#kt_app_sidebar_right{
+  z-index: 3;
+}
+#kt_app_header{
+  z-index: 2;
 }

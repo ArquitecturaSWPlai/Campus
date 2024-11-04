@@ -1,87 +1,63 @@
 @font-face {
-  font-family: "Conv_Nutmeg-Regular";
-  src: url("../fonts/Nutmeg-Regular.eot");
-  src: local("☺"), url("../fonts/Nutmeg-Regular.woff") format("woff"),
-    url("../fonts/Nutmeg-Regular.ttf") format("truetype"),
-    url("../fonts/Nutmeg-Regular.svg") format("svg");
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.ttf");
+  src: local("☺"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Nutmeg-Black";
-  src: url("../fonts/Nutmeg-Black.woff2") format("woff2"),
-    url("../fonts/Nutmeg-Black.woff") format("woff");
+  font-family: "Montserrat-Black";
+  src: url("../fonts/Montserrat-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nutmeg-Light";
-  src: url("../fonts/Nutmeg-Light.woff2") format("woff2"),
-    url("../fonts/Nutmeg-Light.woff") format("woff");
+  font-family: "Montserrat-Light";
+  src: url("../fonts/Montserrat-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nutmeg Ultra";
-  src: url("../fonts/Nutmeg-UltraLight.woff2") format("woff2"),
-    url("../fonts/Nutmeg-UltraLight.woff") format("woff");
+  font-family: "Montserrat-ExtraBold";
+  src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nutmeg-Bold";
-  src: url("../fonts/Nutmeg-Bold.woff2") format("woff2"),
-    url("../fonts/Nutmeg-Bold.woff") format("woff");
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nutmeg-Thin";
-  src: url("../fonts/Nutmeg-Thin.woff2") format("woff2"),
-    url("../fonts/Nutmeg-Thin.woff") format("woff");
+  font-family: "Montserrat-Thin";
+  src: url("../fonts/Montserrat-Thin.ttf") format("truetype"),
+    url("../fonts/Montserrat-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nutmeg";
-  src: url("../fonts/Nutmeg-BoldItalic.woff2") format("woff2"),
-    url("../fonts/Nutmeg-BoldItalic.woff") format("woff");
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-BoldItalic.ttf") format("woff2");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Nutmeg Book";
-  src: url("../fonts/Nutmeg-Book.woff2") format("woff2"),
-    url("../fonts/Nutmeg-Book.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nutmeg Headline";
-  src: url("../fonts/NutmegHeadline-Light.woff2") format("woff2"),
-    url("../fonts/NutmegHeadline-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 
 body {
-  font-family: "Conv_Nutmeg-Regular", sans-serif !important;
+  font-family: "Montserrat-Regular", sans-serif !important;
 }
 
 .myp-1 {
@@ -157,7 +133,7 @@ body {
 /*   TARJETAS    */
 
 h4.tituloTarjeta-programaCompleto {
-    font-family: 'Nutmeg-Bold';
+    font-family: 'Montserrat-Bold';
     font-size: 24px;
     position: relative;
     top: 20%;
@@ -502,7 +478,7 @@ h4.tituloTarjeta-programaCompleto {
   
   
   .comprar_btn {
-    font-family: "Nutmeg-Bold";
+    font-family: "Montserrat-Bold";
     width: 150px;
     height: 49px;
     font-size: 13px;
@@ -519,7 +495,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   
   .ver_btn {
-    font-family: "Nutmeg-Bold";
+    font-family: "Montserrat-Bold";
     width: 150px;
     height: 49px;
     font-size: 13px;
@@ -536,7 +512,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   
   h5.descripcionGeneral {
-    font-family: 'Nutmeg-Bold';
+    font-family: 'Montserrat-Bold';
     padding-top: 5%;
     font-weight: 800;
     color: #1a96af;
@@ -544,7 +520,7 @@ h4.tituloTarjeta-programaCompleto {
   }
   
   h5.subtituloModelo {
-    font-family: 'Nutmeg-Bold';
+    font-family: 'Montserrat-Bold';
     font-weight: 800;
     color: #008c93;
     font-size: 30px;
@@ -618,7 +594,7 @@ h4.tituloTarjeta-programaCompleto {
     border-radius: 20px;
     border-width: 2px;
     padding: 3px;
-    font-family: 'Conv_Nutmeg-Regular';
+    font-family: 'Montserrat-Regular';
     text-align: center;
     color: #1a96af;
     font-size: 9px;
@@ -807,14 +783,14 @@ p.copyright {
   color: white;
   text-align: center;
   font-size: 12px;
-  font-family: "Nutmeg Book";
+  font-family: "Montserrat";
   font-weight: 100;
 }
 
 a#avisoPrivacidad, a#noticias, h5.divisor {
   color: #a6e35f;
   font-weight: 300;
-  font-family: "Nutmeg Book";
+  font-family: "Montserrat";
   padding: 3px;
   font-size: 13.68px;
   margin: 0;
@@ -827,11 +803,6 @@ a#avisoPrivacidad, a#noticias, h5.divisor {
   height: 426px;
 }
 
-/* p {
-  font-family: "Conv_Nutmeg-Regular";
-  color: #363a44;
-  font-size: 15px;
-} */
 
 .h-41px {
   height: 41px;
