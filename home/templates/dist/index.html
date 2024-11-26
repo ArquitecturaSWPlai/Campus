@@ -2266,341 +2266,350 @@
 										<!-- start::iframe ayuda -->
 										<!DOCTYPE html>
 										<html>
-											<head>
-												<META HTTP-EQUIV='content-type' CONTENT='text/html; charset=UTF-8'>
-												<style>
-													#zohoSupportWebToCase textarea,
-													#zohoSupportWebToCase input[type='text'],
-													#zohoSupportWebToCase select,
-													.wb_common {
-														width: 280px;
-													}
 
-													#zohoSupportWebToCase td {
-														padding: 11px 5px;
-													}
+										<head>
+											<META HTTP-EQUIV='content-type' CONTENT='text/html; charset=UTF-8'>
+											<style>
+												#zohoSupportWebToCase textarea,
+												#zohoSupportWebToCase input[type='text'],
+												#zohoSupportWebToCase input[type='date'],
+												#zohoSupportWebToCase select,
+												.wb_common {
+													width: 280px;
+												}
 
-													#zohoSupportWebToCase textarea,
-													#zohoSupportWebToCase input[type='text'],
-													#zohoSupportWebToCase select {
-														border: 1px solid #ddd;
-														padding: 3px 5px;
-														border-radius: 3px;
-													}
+												#zohoSupportWebToCase td {
+													padding: 11px 5px;
+												}
 
-													#zohoSupportWebToCase select {
-														box-sizing: unset
-													}
+												#zohoSupportWebToCase textarea,
+												#zohoSupportWebToCase input[type='text'],
+												#zohoSupportWebToCase input[type='date'],
+												#zohoSupportWebToCase select {
+													border: 1px solid #ddd;
+													padding: 3px 5px;
+													border-radius: 3px;
+												}
 
-													#zohoSupportWebToCase .wb_selectDate {
-														width: auto
-													}
+												#zohoSupportWebToCase select {
+													box-sizing: unset
+												}
 
-													#zohoSupportWebToCase input.wb_cusInput {
-														width: 108px
-													}
+												#zohoSupportWebToCase .wb_selectDate {
+													width: auto
+												}
 
-													.wb_FtCon {
-														display: flex;
-														align-items: center;
-														justify-content: flex-end;
-														margin-top: 15px;
-														padding-left: 10px
-													}
+												#zohoSupportWebToCase input.wb_cusInput {
+													width: 108px
+												}
 
-													.wb_logoCon {
-														display: flex;
-														margin-left: 5px
-													}
+												.wb_FtCon {
+													display: flex;
+													align-items: center;
+													justify-content: flex-end;
+													margin-top: 15px;
+													padding-left: 10px
+												}
 
-													.wb_logo {
-														max-width: 16px;
-														max-height: 16px;
-													}
+												.wb_logoCon {
+													display: flex;
+													margin-left: 5px
+												}
 
-													.zsFormClass {
-														background-color: #FFFFFF;
-														width: 900px
-													}
-												</style>
-												<style>
-													.zsFontClass {
-														color: #000000;
-														font-family: Arial;
-														font-size: 13px
-													}
-												</style>
-												<style>
-													.manfieldbdr {
-														border-left: 1px solid #ff6448 !important
-													}
+												.wb_logo {
+													max-width: 16px;
+													max-height: 16px;
+												}
 
-													.hleft {
-														text-align: left;
-													}
+												#zohoSupportWebToCase .wb_multi_pick {
+													border: 1px solid #ddd;
+													padding: 3px 5px;
+													border-radius: 3px;
+													width: 280px;
+													height: 95px;
+													overflow-y: auto;
+												}
 
-													input[type=file]::-webkit-file-upload-button {
-														cursor: pointer;
-													}
+												#zohoSupportWebToCase .wb_multi_pick_label {
+													display: block;
+												}
 
-													.wtcsepcode {
-														margin: 0px 15px;
-														color: #aaa;
-														float: left;
-													}
+												#zohoSupportWebToCase .wb_multi_pick_input,
+												.wb_multi_pick_input_all {
+													vertical-align: middle;
+													margin-right: 5px;
+												}
 
-													.wtccloudattach {
-														float: left;
-														color: #00a3fe !important;
-														cursor: pointer;
-														text-decoration: none !important;
-													}
+												.zsFormClass {
+													background-color: #FFFFFF;
+													width: 900px
+												}
+											</style>
+											<style>
+												.zsFontClass {
+													color: #000000;
+													font-family: Verdana;
+													font-size: 13px
+												}
+											</style>
+											<style>
+												.manfieldbdr {
+													border-left: 1px solid #ff6448 !important
+												}
 
-													.wtccloudattach:hover {
-														text-decoration: none !important;
-													}
+												.hleft {
+													text-align: left;
+												}
 
-													.wtcuploadinput {
-														cursor: pointer;
-														float: left;
-														width: 62px;
-														margin-top: -20px;
-														opacity: 0;
-														clear: both;
-													}
+												input[type=file]::-webkit-file-upload-button {
+													cursor: pointer;
+												}
 
-													.wtcuploadfile {
-														float: left;
-														color: #00a3fe;
-													}
+												.wtcsepcode {
+													margin: 0px 15px;
+													color: #aaa;
+													float: left;
+												}
 
-													.filenamecls {
-														margin-right: 15px;
-														float: left;
-														margin-top: 5px;
-													}
+												.wtccloudattach {
+													float: left;
+													color: #00a3fe !important;
+													cursor: pointer;
+													text-decoration: none !important;
+												}
 
-													.clboth {
-														clear: both;
-													}
+												.wtccloudattach:hover {
+													text-decoration: none !important;
+												}
 
-													#zsFileBrowseAttachments {
-														clear: both;
-														margin: 5px 0px 10px;
-													}
+												.wtcuploadinput {
+													cursor: pointer;
+													float: left;
+													width: 62px;
+													margin-top: -20px;
+													opacity: 0;
+													clear: both;
+												}
 
-													.zsFontClass {
-														vertical-align: top;
-													}
+												.wtcuploadfile {
+													float: left;
+													color: #00a3fe;
+												}
 
-													#tooltip-zc {
-														font: normal 12px Arial, Helvetica, sans-serif;
-														line-height: 18px;
-														position: absolute;
-														padding: 8px;
-														margin: 20px 0 0;
-														background: #fff;
-														border: 1px solid #528dd1;
-														-moz-border-radius: 5px;
-														-webkit-border-radius: 5px;
-														border-radius: 5px;
-														color: #eee;
-														-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-														-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-														z-index: 10000;
-														color: #777
-													}
+												.filenamecls {
+													margin-right: 15px;
+													float: left;
+													margin-top: 5px;
+												}
 
-													.wtcmanfield {
-														color: #f00;
-														font-size: 16px;
-														position: relative;
-														top: 2px;
-														left: 1px;
-													}
+												.clboth {
+													clear: both;
+												}
 
-													#zsCloudAttachmentIframe {
-														width: 100%;
-														height: 100%;
-														z-index: 99999 !important;
-														position: fixed;
-														left: 0px;
-														top: 0px;
-														border-style: none;
-														display: none;
-														background-color: #fff;
-													}
+												#zsFileBrowseAttachments {
+													clear: both;
+													margin: 5px 0px 10px;
+												}
 
-													.wtchelpinfo {
-														background-position: -246px -485px;
-														width: 15px;
-														height: 15px;
-														display: inline-block;
-														position: relative;
-														top: 2px;
-														background-image: url(https://d1ydxa2xvtn0b5.cloudfront.net/app/images/zs-mpro.b6c9cf2347c62390fdcb.png);
-													}
+												.zsFontClass {
+													vertical-align: top;
+												}
 
-													.zsMaxSizeMessage {
-														font-size: 13px;
-													}
-												</style>
-												<script src='https://d17nz991552y2g.cloudfront.net/app/js/jqueryandencoder.ffa5afd5124fbedceea9.js'></script>
-												<script>function trimBoth(str) { return jQuery.trim(str); } function setAllDependancyFieldsMapping() { var mapDependancyLabels = getMapDependenySelectValues(jQuery("[id='property(module)']").val(), "JSON_MAP_DEP_LABELS"); if (mapDependancyLabels) { for (var i = 0; i < mapDependancyLabels.length; i++) { var label = mapDependancyLabels[i]; var obj = document.forms['zsWebToCase_453880000005422157'][label]; if (obj) { setDependent(obj, true); } } } } function getMapDependenySelectValues(module, key) { var dependencyObj = jQuery.parseJSON(jQuery("[id='dependent_field_values_" + module + "']").val()); if (dependencyObj == undefined) { return dependencyObj; } return dependencyObj[key]; } function setDependent(obj, isload) { var name = obj.id || (obj[0] && obj[0].id) || ""; var module = jQuery("[id='property(module)']").val(); var val = ""; var myObject = getMapDependenySelectValues(module, "JSON_VALUES"); if (myObject != undefined) { val = myObject[name]; } var mySelObject = getMapDependenySelectValues(module, "JSON_SELECT_VALUES"); if (val != null && val != "" && val != "null" && mySelObject) { var fields = val; for (var i in fields) { if (fields.hasOwnProperty(i)) { var isDependent = false; var label = i; var values = fields[i]; if (label.indexOf(")") > -1) { label = label.replace(/\)/g, '_____'); } if (label.indexOf("(") > -1) { label = label.replace(/\(/g, '____'); } if (label.indexOf(".") > -1) { label = label.replace(/\./g, '___'); } var depObj = document.forms['zsWebToCase_453880000005422157'][label]; if (depObj && depObj.options) { var mapValues = ""; var selected_val = depObj.value; var depLen = depObj.options.length - 1; for (var n = depLen; n >= 0; n--) { if (depObj.options[n].selected) { if (mapValues == "") { mapValues = depObj.options[n].value; } else { mapValues = mapValues + ";;;" + depObj.options[n].value; } } } depObj.value = ""; var selectValues = mySelObject[label]; for (var k in values) { var rat = k; if (rat == "-None-") { rat = ""; } var parentValues = mySelObject[name]; if (rat == trimBoth(obj.value)) { isDependent = true; depObj.length = 0; var depvalues = values[k]; var depLen = depvalues.length - 1; for (var j = 0; j <= depLen; j++) { var optionElement = document.createElement("OPTION"); var displayValue = depvalues[j]; var actualValue = displayValue; if (actualValue == "-None-") { optionElement.value = ""; displayValue = "-None-"; } else { optionElement.value = actualValue; } optionElement.text = displayValue; if (mapValues != undefined) { var mapValue = mapValues.split(";;;"); var len = mapValue.length; for (var p = 0; p < len; p++) { if (actualValue == mapValue[p]) { optionElement.selected = true; } } } depObj.options.add(optionElement); } } } if (!isDependent) { depObj.length = 0; var len = selectValues.length; for (var j = 0; j < len; j++) { var actualValue = selectValues[j]; var optionElement = document.createElement("OPTION"); if (actualValue == "-None-") { optionElement.value = ""; } else { optionElement.value = selectValues[j]; } optionElement.text = selectValues[j]; depObj.options.add(optionElement); } depObj.value = selected_val; } if (!isload) { setDependent(depObj, false); } var jdepObj = jQuery(depObj); if (jdepObj.hasClass('select2-offscreen')) { jdepObj.select2("val", jdepObj.val()); } } } } } } var zctt = function () { var tt, mw = 400, top = 10, left = 0, doctt = document; var ieb = doctt.all ? true : false; return { showtt: function (cont, wid) { if (tt == null) { tt = doctt.createElement('div'); tt.setAttribute('id', 'tooltip-zc'); doctt.body.appendChild(tt); doctt.onmousemove = this.setpos; doctt.onclick = this.hidett; } tt.style.display = 'block'; tt.innerHTML = cont; tt.style.width = wid ? wid + 'px' : 'auto'; if (!wid && ieb) { tt.style.width = tt.offsetWidth; } if (tt.offsetWidth > mw) { tt.style.width = mw + 'px' } h = parseInt(tt.offsetHeight) + top; w = parseInt(tt.offsetWidth) + left; }, hidett: function () { tt.style.display = 'none'; }, setpos: function (e) { var u = ieb ? event.clientY + doctt.body.scrollTop : e.pageY; var l = ieb ? event.clientX + doctt.body.scrollLeft : e.pageX; var cw = doctt.body.clientWidth; var ch = doctt.body.clientHeight; if (l < 0) { tt.style.left = left + 'px'; tt.style.right = ''; } else if ((l + w + left) > cw) { tt.style.left = ''; tt.style.right = ((cw - l) + left) + 'px'; } else { tt.style.right = ''; tt.style.left = (l + left) + 'px'; } if (u < 0) { tt.style.top = top + 'px'; tt.style.bottom = ''; } else if ((u + h + left) > ch) { tt.style.top = ''; tt.style.bottom = ((ch - u) + top) + 'px'; } else { tt.style.bottom = ''; tt.style.top = (u + top) + 'px'; } } }; }(); var zsWebFormMandatoryFields = new Array("First Name", "Contact Name", "Email", "Subject", "¿Cómo te podemos apoyar?", "Category", "Description"); var zsFieldsDisplayLabelArray = new Array("Nombre", "Apellidos", "Correo electrónico", "Título", "¿Cómo te podemos apoyar?", "Selecciona una categoría", "Detalle de tu solicitud"); function zsValidateMandatoryFields() { var name = ''; var email = ''; var isError = 0; for (var index = 0; index < zsWebFormMandatoryFields.length; index++) { isError = 0; var fieldObject = document.forms['zsWebToCase_453880000005422157'][zsWebFormMandatoryFields[index]]; if (fieldObject) { if (((fieldObject.value).replace(/^\s+|\s+$/g, '')).length == 0) { alert(zsFieldsDisplayLabelArray[index] + ' no puede estar vacío '); fieldObject.focus(); isError = 1; return false; } else { if (fieldObject.name == 'Email') { if (!fieldObject.value.match(/^([\w_][\w\-_.+\'&]*)@(?=.{4,256}$)(([\w]+)([\-_]*[\w])*[\.])+[a-zA-Z]{2,22}$/)) { isError = 1; alert('Introduzca una ID de correo electrónico válida'); fieldObject.focus(); return false; } } } if (fieldObject.nodeName == 'SELECT') { if (fieldObject.options[fieldObject.selectedIndex].value == '-None-') { alert(zsFieldsDisplayLabelArray[index] + ' no puede ser nulo'); fieldObject.focus(); isError = 1; return false; } } if (fieldObject.type == 'checkbox') { if (fieldObject.checked == false) { alert('Acepte por favor ' + zsFieldsDisplayLabelArray[index]); fieldObject.focus(); isError = 1; return false; } } } } if (isError == 0) { document.getElementById('zsSubmitButton_453880000005422157').setAttribute('disabled', 'disabled'); } } var ZSEncoder = { encodeForHTML: function (str) { if (str && typeof (str) === 'string') { return jQuery.encoder.encodeForHTML(str); } return str; }, encodeForHTMLAttribute: function (str) { if (str && typeof (str) === 'string') { return jQuery.encoder.encodeForHTMLAttribute(str); } return str; }, encodeForJavascript: function (str) { if (str && typeof (str) === 'string') { return jQuery.encoder.encodeForJavascript(str); } return str; }, encodeForCSS: function (str) { if (str && typeof (str) === 'string') { return jQuery.encoder.encodeForCSS(str); } return str; } }; var zsAttachedAttachmentsCount = 0; var zsAllowedAttachmentLimit = 4; var zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5]; function zsOpenCloudPickerIframe() { if (zsAttachedAttachmentsCount < 5) { var zsCloudPickerIframeSrc = jQuery('#zsCloudPickerIframeSrc').val(); jQuery('#zsCloudAttachmentIframe').attr('src', zsCloudPickerIframeSrc.substring(0, zsCloudPickerIframeSrc.length - 1) + (5 - zsAttachedAttachmentsCount)).show(); zsListenCloudPickerMessages(); } } function zsListenCloudPickerMessages() { if (window.addEventListener) { window.addEventListener('message', zsWebReceiveMessage, false); } else if (window.attachEvent) { window.attachEvent('onmessage', zsWebReceiveMessage); } } var zsCloudPickerJSON = {}; function zsWebReceiveMessage(event) { var zsUrlRegex = /^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\:\'\/\\+=&amp;%\$#_]*)?$/; if (zsUrlRegex.test(event.origin)) { var zsMessageType = event.data.split('&&&'); if (zsMessageType[0] == 'zsCloudPickerMessage') { if (window.addEventListener) { window.removeEventListener('message', zsWebReceiveMessage, false); } else if (window.attachEvent) { window.detachEvent('onmessage', zsWebReceiveMessage); } jQuery('#zsCloudAttachmentIframe').hide(); var isAttachedFilesDetails = zsMessageType[1].split('|||'); if (isAttachedFilesDetails[0] == 'cloudPickerResponse') { var zsCloudPickerAttachmentDetails = isAttachedFilesDetails[1].split('::::'); var zsCloudPickerAttachmentsJSON = jQuery.parseJSON(zsCloudPickerAttachmentDetails[0]); if (zsAttachedAttachmentsCount <= zsAllowedAttachmentLimit) { zsRenderCloudAttachments(zsCloudPickerAttachmentsJSON); } else { alert('No puede agregar más de 5 archivos'); return false; } } } } } function zsRenderCloudAttachments(zsCloudPickerAttachmentsJSON) { if (!jQuery.isEmptyObject(zsCloudPickerAttachmentsJSON)) { jQuery.each(zsCloudPickerAttachmentsJSON, function (cloudServiceName, attachments) { var zsAttachmentsArray = []; if (!jQuery.isEmptyObject(zsCloudPickerJSON[cloudServiceName])) { zsAttachmentsArray = zsCloudPickerJSON[cloudServiceName]; } for (var attachmentsIndex = 0; attachmentsIndex < attachments.length; attachmentsIndex++) { if (zsAttachedAttachmentsCount <= zsAllowedAttachmentLimit) { var zsCloudAttachmentsList = ''; var attachmentsDetailJSON = attachments[attachmentsIndex]; var zsCloudAttachmentName = attachmentsDetailJSON['docName']; var extension = zsCloudAttachmentName.split('.').pop().toLowerCase(); var unSupportedExtensions = ["ade", "adp", "apk", "appx", "appxbundle", "bat", "cab", "cer", "chm", "cmd", "com", "cpl", "dll", "dmg", "exe", "hlp", "hta", "ins", "iso", "isp", "jar", "js", "jse", "lnk", "mde", "msc", "msi", "msix", "msixbundle", "msp", "mst", "nsh", "pif", "ps1", "pst", "reg", "scr", "sct", "shb", "sys", "tmp", "url", "vb", "vbe", "vbs", "vxd", "wsc", "wsf", "wsh", "terminal"]; if (unSupportedExtensions.indexOf(extension) != -1) { alert("El archivo no se ha adjuntado porque su extensión no es compatible."); continue; } zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1; var zsCloudAttachmentId = attachmentsDetailJSON['docId']; zsCloudAttachmentId = zsCloudAttachmentId.replace(/\s/g, ''); zsCloudAttachmentsList = '<div class="filenamecls zsFontClass">' + ZSEncoder.encodeForHTML(zsCloudAttachmentName) + '<a id="' + ZSEncoder.encodeForHTMLAttribute(zsCloudAttachmentId) + '" cloudservice="' + ZSEncoder.encodeForHTMLAttribute(cloudServiceName) + '" class="zscloudAttachment" style="margin-left:10px;" href="javascript:;">X</a> </div>'; jQuery('#zsFileBrowseAttachments').append(zsCloudAttachmentsList); zsAttachmentsArray.push(attachmentsDetailJSON); zsCloudPickerJSON[cloudServiceName] = zsAttachmentsArray; jQuery("input[name='zsCloudPickerAttachments']")[0].value = JSON.stringify(zsCloudPickerJSON); } } }); } zsChangeMousePointer(); } jQuery(document).off('click.cAtm').on('click.cAtm', '.zscloudAttachment', function () { var cloudService = jQuery(this).attr('cloudservice'); var cloudAttachmentId = jQuery(this).attr('id'); var zsCloudAttachmentsArr = zsCloudPickerJSON[cloudService]; var isZsCloudAttachmentRemoved = 0; for (var attachmentsIndex = 0; attachmentsIndex < zsCloudAttachmentsArr.length; attachmentsIndex++) { if (isZsCloudAttachmentRemoved != 1) { jQuery.each(zsCloudAttachmentsArr[attachmentsIndex], function (attachmentsDetailJsonKey, attachmentsDetailJsonValue) { if (attachmentsDetailJsonKey == 'docId' && attachmentsDetailJsonValue.replace(/\s/g, '') == cloudAttachmentId) { var zsAttachmentToBeRemoved = jQuery.inArray(zsCloudAttachmentsArr[attachmentsIndex], zsCloudAttachmentsArr); zsCloudAttachmentsArr.splice(zsAttachmentToBeRemoved, 1); isZsCloudAttachmentRemoved = 1; } }); } } jQuery(this).parent().remove(); zsAttachedAttachmentsCount = zsAttachedAttachmentsCount - 1; jQuery("input[name='zsCloudPickerAttachments']")[0].value = JSON.stringify(zsCloudPickerJSON); zsChangeMousePointer(); }); function zsRenderBrowseFileAttachment(zsAttachmentObject, zsAttachmentDetails) { if (zsAttachmentObject != '') { if ((zsAttachmentDetails.files && (zsAttachmentDetails.files[0].size / (1024 * 1024)) > 20)) { zsAttachmentDetails.value = ''; alert('El tamaño de archivo máximo permitido es 20MB.'); return; } if (zsAttachedAttachmentsCount < 5) { var zsFileName = ''; if ((zsAttachmentObject.indexOf('\\') > -1)) { var zsAttachmentDataSplits = zsAttachmentObject.split('\\'); var zsAttachmentDataSplitsLen = zsAttachmentDataSplits.length; zsFileName = zsAttachmentDataSplits[zsAttachmentDataSplitsLen - 1]; } else { zsFileName = zsAttachmentObject; } var extension = zsFileName.split('.').pop().toLowerCase(); var unSupportedExtensions = ["ade", "adp", "apk", "appx", "appxbundle", "bat", "cab", "cer", "chm", "cmd", "com", "cpl", "dll", "dmg", "exe", "hlp", "hta", "ins", "iso", "isp", "jar", "js", "jse", "lnk", "mde", "msc", "msi", "msix", "msixbundle", "msp", "mst", "nsh", "pif", "ps1", "pst", "reg", "scr", "sct", "shb", "sys", "tmp", "url", "vb", "vbe", "vbs", "vxd", "wsc", "wsf", "wsh", "terminal"]; if (unSupportedExtensions.indexOf(extension) != -1) { alert("El archivo no se ha adjuntado porque su extensión no es compatible."); return; } var zsCurrentAttachmentIdTokens = jQuery(zsAttachmentDetails).attr('id').split('_'); var zsCurrentAttachmentId = parseInt(zsCurrentAttachmentIdTokens[1]); var zsAttachmentIdToBeRemoved = jQuery.inArray(zsCurrentAttachmentId, zsAttachmentFileBrowserIdsList); zsAttachmentFileBrowserIdsList.splice(zsAttachmentIdToBeRemoved, 1); var zsNextAttachmentId = zsAttachmentFileBrowserIdsList[0]; var zsnextAttachment = 'zsattachment_' + zsNextAttachmentId; jQuery('#zsattachment_' + zsCurrentAttachmentId).hide(); jQuery('#' + zsnextAttachment).show(); jQuery('#zsFileBrowseAttachments').append('<div class="filenamecls zsFontClass" id="file_' + zsCurrentAttachmentId + '">' + ZSEncoder.encodeForHTML(zsFileName) + '<a class="zsfilebrowseAttachment" style="margin-left:10px;" href="javascript:;" id="fileclose_' + zsCurrentAttachmentId + '">X</a></div>'); zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1; } } zsChangeMousePointer(); } jQuery(document).off('click.fba').on('click.fba', '.zsfilebrowseAttachment', function () { var currentlyDeletedElement = jQuery(this).attr('id').split('_')[1]; jQuery('#zsattachment_' + currentlyDeletedElement).val(''); jQuery('#zsattachment_' + currentlyDeletedElement).replaceWith(jQuery('#zsattachment_' + currentlyDeletedElement).clone()); jQuery(this).parent().remove(); zsAttachedAttachmentsCount = zsAttachedAttachmentsCount - 1; zsAttachmentFileBrowserIdsList.push(parseInt(currentlyDeletedElement)); zsRearrangeFileBrowseAttachments(); zsChangeMousePointer(); }); function zsRearrangeFileBrowseAttachments() { jQuery.each(jQuery('input[type = file]'), function (fileIndex, fileObject) { fileIndex = fileIndex + 1; if (fileIndex == zsAttachmentFileBrowserIdsList[0]) { jQuery('#zsattachment_' + fileIndex).show(); } else { jQuery('#zsattachment_' + fileIndex).hide(); } }); } function zsOpenFileBrowseAttachment(clickEvent) { if (zsAttachedAttachmentsCount >= 5) { clickEvent.preventDefault(); } } function zsChangeMousePointer() { if (zsAttachedAttachmentsCount >= 5) { jQuery('#zsMaxLimitMessage').show(); jQuery('#zsattachment_1,#zsattachment_2,#zsattachment_3,#zsattachment_4,#zsattachment_5').hide(); jQuery('#zsBrowseAttachment,#zsCloudAttachment').css('cursor', 'default'); } else { jQuery('#zsMaxLimitMessage').hide(); zsRearrangeFileBrowseAttachments(); jQuery('#zsBrowseAttachment,#zsCloudAttachment').css('cursor', 'pointer'); } } document.addEventListener('readystatechange', function () { if (document.readyState === 'complete' && window.zsRegenerateCaptcha) { zsRegenerateCaptcha(); } setAllDependancyFieldsMapping(); document.getElementById('zsSubmitButton_453880000005422157').removeAttribute('disabled'); zsAttachedAttachmentsCount = 0; zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5]; jQuery('#zsFileBrowseAttachments').html(''); jQuery.each(jQuery('input[type = file]'), function (fileIndex, fileObject) { var zsAttachmentId = jQuery(fileObject).attr('id'); var zsAttachmentNo = zsAttachmentId.split('_')[1]; var zsAttachedFile = jQuery('#zsattachment_' + zsAttachmentNo); if (zsAttachedFile[0] != undefined && zsAttachedFile[0].files[0] != undefined) { var zsFileBrowserAttachmentHtml = ''; zsAttachedFileName = zsAttachedFile[0].files[0].name; zsFileBrowserAttachmentHtml = '<div class="filenamecls zsFontClass" id="file_' + zsAttachmentNo + '">' + ZSEncoder.encodeForHTML(zsAttachedFileName) + '<a class="zsfilebrowseAttachment" style="margin-left:10px" href="javascript:;" id="fileclose_' + zsAttachmentNo + '">X</a></div>'; jQuery('#zsFileBrowseAttachments').append(zsFileBrowserAttachmentHtml); zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1; var zsAttachmentIdToBeRemoved = jQuery.inArray(parseInt(zsAttachmentNo), zsAttachmentFileBrowserIdsList); zsAttachmentFileBrowserIdsList.splice(zsAttachmentIdToBeRemoved, 1); } }); if (document.forms['zsWebToCase_453880000005422157']['zsCloudPickerAttachments'] != undefined) { var zsCloudAttachments = jQuery.parseJSON(document.forms['zsWebToCase_453880000005422157']['zsCloudPickerAttachments'].value); zsRenderCloudAttachments(zsCloudAttachments); } zsRearrangeFileBrowseAttachments(); zsChangeMousePointer(); }); function zsResetWebForm(webFormId) { document.forms['zsWebToCase_' + webFormId].reset(); document.getElementById('zsSubmitButton_453880000005422157').removeAttribute('disabled'); setAllDependancyFieldsMapping(); zsAttachedAttachmentsCount = 0; zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5]; jQuery('#zsFileBrowseAttachments').html(''); zsCloudPickerJSON = {}; if (document.forms['zsWebToCase_453880000005422157']['zsCloudPickerAttachments'] != undefined) { document.forms['zsWebToCase_453880000005422157']['zsCloudPickerAttachments'].value = JSON.stringify({}); } zsRearrangeFileBrowseAttachments(); zsChangeMousePointer(); } </script>
-											</head>
-											<div id='zohoSupportWebToCase' align='center'>
-												<form name='zsWebToCase_453880000005422157' id='zsWebToCase_453880000005422157'
-													action='https://desk.zoho.com/support/WebToCase' method='POST' onSubmit='return zsValidateMandatoryFields()'
-													enctype='multipart/form-data'> <input type='hidden' name='xnQsjsdp'
-														value='edbsnca46cfc8ab3c389b0fd8e64bf5310985' /> <input type='hidden' name='xmIwtLD'
-														value='edbsnbaa7455ddfd93b5f992d1d971632ab2ff9d2236432800f4d96ded0952a4fd237' /> <input type='hidden'
-														name='xJdfEaS' value='' /> <input type='hidden' name='actionType' value='Q2FzZXM=' /> <input type="hidden"
-														id="property(module)" value="Cases" /> <input type="hidden" id="dependent_field_values_Cases"
-														value="&#x7b;&quot;JSON_VALUES&quot;&#x3a;&#x7b;&quot;CASECF10&quot;&#x3a;&#x7b;&quot;Category&quot;&#x3a;&#x7b;&quot;Quiero&#x20;informaci&oacute;n&quot;&#x3a;&#x5b;&quot;&iquest;Qu&eacute;&#x20;cursos&#x20;y&#x20;programas&#x20;ofrece&#x20;PLAi&#x3f;&quot;,&quot;&iquest;C&oacute;mo&#x20;me&#x20;registro&#x20;en&#x20;el&#x20;Canal&#x20;Aprender&#x20;de&#x20;PLAi&#x3f;&quot;,&quot;&iquest;C&oacute;mo&#x20;me&#x20;inscribo&#x20;en&#x20;un&#x20;curso&#x3f;&quot;,&quot;&iquest;C&oacute;mo&#x20;reservo&#x20;un&#x20;espacio&#x20;f&iacute;sico&#x20;en&#x20;PLAi&#x3f;&quot;,&quot;&iquest;C&oacute;mo&#x20;reservo&#x20;una&#x20;Aula&#x20;virtual&#x20;en&#x20;PLAi&#x3f;&quot;,&quot;Servicio&#x20;de&#x20;dise&ntilde;o&#x20;y&#x20;desarrollo&#x20;de&#x20;cursos&#x20;en&#x20;l&iacute;nea&quot;,&quot;Servicio&#x20;de&#x20;producci&oacute;n&#x20;de&#x20;contenido&#x20;multimedia&quot;,&quot;&iquest;C&oacute;mo&#x20;puedo&#x20;convertirme&#x20;en&#x20;un&#x20;Aliado&#x20;PLAi&#x3f;&quot;,&quot;Recorridos&#x20;por&#x20;las&#x20;instalaciones&#x20;de&#x20;PLAi&quot;,&quot;Otro&quot;&#x5d;,&quot;Quiero&#x20;reportar&#x20;un&#x20;problema&quot;&#x3a;&#x5b;&quot;No&#x20;puedo&#x20;registrarme&#x20;en&#x20;el&#x20;Canal&#x20;Aprender&quot;,&quot;No&#x20;puedo&#x20;restablecer&#x20;mi&#x20;contrase&ntilde;a&quot;,&quot;No&#x20;puedo&#x20;entrar&#x20;a&#x20;Campus&#x20;PLAi&#x20;&#x28;Plataforma&#x20;de&#x20;cursos&#x29;&quot;,&quot;No&#x20;aparece&#x20;el&#x20;curso&#x20;en&#x20;el&#x20;que&#x20;me&#x20;inscrib&iacute;&quot;,&quot;No&#x20;puedo&#x20;ingresar&#x20;en&#x20;edX&quot;,&quot;No&#x20;me&#x20;llega&#x20;el&#x20;correo&#x20;de&#x20;activaci&oacute;n&#x20;de&#x20;edX&quot;,&quot;Otro&quot;&#x5d;,&quot;--Selecci&oacute;n--&quot;&#x3a;&#x5b;&quot;--Selecci&oacute;n--&quot;&#x5d;&#x7d;&#x7d;&#x7d;,&quot;JSON_SELECT_VALUES&quot;&#x3a;&#x7b;&quot;CASECF10&quot;&#x3a;&#x5b;&quot;--Selecci&oacute;n--&quot;,&quot;Quiero&#x20;informaci&oacute;n&quot;,&quot;Quiero&#x20;reportar&#x20;un&#x20;problema&quot;&#x5d;,&quot;Category&quot;&#x3a;&#x5b;&quot;--Selecci&oacute;n--&quot;,&quot;&iquest;Qu&eacute;&#x20;cursos&#x20;y&#x20;programas&#x20;ofrece&#x20;PLAi&#x3f;&quot;,&quot;&iquest;C&oacute;mo&#x20;me&#x20;registro&#x20;en&#x20;el&#x20;Canal&#x20;Aprender&#x20;de&#x20;PLAi&#x3f;&quot;,&quot;&iquest;C&oacute;mo&#x20;me&#x20;inscribo&#x20;en&#x20;un&#x20;curso&#x3f;&quot;,&quot;&iquest;C&oacute;mo&#x20;reservo&#x20;un&#x20;espacio&#x20;f&iacute;sico&#x20;en&#x20;PLAi&#x3f;&quot;,&quot;&iquest;C&oacute;mo&#x20;reservo&#x20;una&#x20;Aula&#x20;virtual&#x20;en&#x20;PLAi&#x3f;&quot;,&quot;Servicio&#x20;de&#x20;dise&ntilde;o&#x20;y&#x20;desarrollo&#x20;de&#x20;cursos&#x20;en&#x20;l&iacute;nea&quot;,&quot;Servicio&#x20;de&#x20;producci&oacute;n&#x20;de&#x20;contenido&#x20;multimedia&quot;,&quot;&iquest;C&oacute;mo&#x20;puedo&#x20;convertirme&#x20;en&#x20;un&#x20;Aliado&#x20;PLAi&#x3f;&quot;,&quot;Recorridos&#x20;por&#x20;las&#x20;instalaciones&#x20;de&#x20;PLAi&quot;,&quot;No&#x20;puedo&#x20;registrarme&#x20;en&#x20;el&#x20;Canal&#x20;Aprender&quot;,&quot;No&#x20;puedo&#x20;restablecer&#x20;mi&#x20;contrase&ntilde;a&quot;,&quot;No&#x20;puedo&#x20;entrar&#x20;a&#x20;Campus&#x20;PLAi&#x20;&#x28;Plataforma&#x20;de&#x20;cursos&#x29;&quot;,&quot;No&#x20;aparece&#x20;el&#x20;curso&#x20;en&#x20;el&#x20;que&#x20;me&#x20;inscrib&iacute;&quot;,&quot;No&#x20;puedo&#x20;ingresar&#x20;en&#x20;edX&quot;,&quot;No&#x20;me&#x20;llega&#x20;el&#x20;correo&#x20;de&#x20;activaci&oacute;n&#x20;de&#x20;edX&quot;,&quot;Otro&quot;&#x5d;&#x7d;,&quot;JSON_MAP_DEP_LABELS&quot;&#x3a;&#x5b;&quot;CASECF10&quot;&#x5d;&#x7d;" />
-													<input type='hidden' name='returnURL' value='https&#x3a;&#x2f;&#x2f;plai.mx' />
-													<table border='0' cellspacing='0' class='zsFormClass'>
-														<tr>
-															<td colspan='2' class='zsFontClass'><strong>Contacto PLAi</strong></td>
-														</tr><br>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>Nombre&nbsp;&nbsp;<br><input type='text'
-																	maxlength='120' name='First Name' value='' class='manfieldbdr' /><a target='_blank'
-																	href='https&#x3a;&#x2f;&#x2f;drive.google.com&#x2f;file&#x2f;d&#x2f;1PmQNjsgPSUOhHUu89DEdzaOxSjHSLByO&#x2f;view'
-																	style='margin-left:10px;' rel='noopener'>Instrucciones</a></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>Apellidos&nbsp;&nbsp;<br><input type='text'
-																	maxlength='120' name='Contact Name' class='manfieldbdr' /></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>Correo electr&oacute;nico&nbsp;&nbsp;<br><input
-																	type='text' maxlength='120' name='Email' value='' class='manfieldbdr' /><i
-																	onmouseout='zctt.hidett()'
-																	onmouseover='zctt.showtt(&quot;Una&#x20;direcci&oacute;n&#x20;de&#x20;correo&#x20;electr&oacute;nico&#x20;donde&#x20;te&#x20;contactaremos&quot;)'
-																	class='wtchelpinfo' style='margin-left:10px;'></i></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>T&iacute;tulo&nbsp;&nbsp;<br><input type='text'
-																	maxlength='255' name='Subject' value='' class='manfieldbdr' /><i onmouseout='zctt.hidett()'
-																	onmouseover='zctt.showtt(&quot;Escribe&#x20;el&#x20;t&iacute;tulo&#x20;breve&#x20;&#x28;M&aacute;x.&#x20;50&#x20;caracteres&#x29;&quot;)'
-																	class='wtchelpinfo' style='margin-left:10px;'></i></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>&iquest;C&oacute;mo te podemos apoyar&#x3f;
-																&nbsp;&nbsp;<br><select name='¿Cómo te podemos apoyar?' value='' class='manfieldbdr'
-																	onchange="setDependent(this, false)" id='CASECF10'>
-																	<option value='--Selección--'>--Selección--</option>
-																	<option value='Quiero información'>Quiero información</option>
-																	<option value='Quiero reportar un problema'>Quiero reportar un problema</option>
-																</select><i onmouseout='zctt.hidett()'
-																	onmouseover='zctt.showtt(&quot;Indica&#x20;si&#x20;necesitas&#x20;informaci&oacute;n&#x20;o&#x20;repotas&#x20;un&#x20;problema&#x20;o&#x20;error&quot;)'
-																	class='wtchelpinfo' style='margin-left:10px;'></i></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>Selecciona una categor&iacute;a
-																&nbsp;&nbsp;<br><select name='Category' value='' class='manfieldbdr'
-																	onchange="setDependent(this, false)" id='Category'>
-																	<option value='--Selección--'>--Selección--</option>
-																	<option value='¿Qué cursos y programas ofrece PLAi?'>¿Qué cursos y programas ofrece PLAi?
-																	</option>
-																	<option value='¿Cómo me registro en el Canal Aprender de PLAi?'>¿Cómo me registro en el Canal
-																		Aprender de PLAi?</option>
-																	<option value='¿Cómo me inscribo en un curso?'>¿Cómo me inscribo en un curso?</option>
-																	<option value='¿Cómo reservo un espacio físico en PLAi?'>¿Cómo reservo un espacio físico en
-																		PLAi?</option>
-																	<option value='¿Cómo reservo una Aula virtual en PLAi?'>¿Cómo reservo una Aula virtual en PLAi?
-																	</option>
-																	<option value='Servicio de diseño y desarrollo de cursos en línea'>Servicio de diseño y
-																		desarrollo de cursos en línea</option>
-																	<option value='Servicio de producción de contenido multimedia'>Servicio de producción de
-																		contenido multimedia</option>
-																	<option value='¿Cómo puedo convertirme en un Aliado PLAi?'>¿Cómo puedo convertirme en un Aliado
-																		PLAi?</option>
-																	<option value='Recorridos por las instalaciones de PLAi'>Recorridos por las instalaciones de
-																		PLAi</option>
-																	<option value='No puedo registrarme en el Canal Aprender'>No puedo registrarme en el Canal
-																		Aprender</option>
-																	<option value='No puedo restablecer mi contraseña'>No puedo restablecer mi contraseña</option>
-																	<option value='No puedo entrar a Campus PLAi (Plataforma de cursos)'>No puedo entrar a Campus
-																		PLAi (Plataforma de cursos)</option>
-																	<option value='No aparece el curso en el que me inscribí'>No aparece el curso en el que me
-																		inscribí</option>
-																	<option value='No puedo ingresar en edX'>No puedo ingresar en edX</option>
-																	<option value='No me llega el correo de activación de edX'>No me llega el correo de activación
-																		de edX</option>
-																	<option value='Otro'>Otro</option>
-																</select><i onmouseout='zctt.hidett()'
-																	onmouseover='zctt.showtt(&quot;Selecciona&#x20;una&#x20;categor&iacute;a&#x20;u&#x20;Otro&quot;)'
-																	class='wtchelpinfo' style='margin-left:10px;'></i></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>URL de la p&aacute;gina&nbsp;&nbsp;<br><input
-																	type='text' maxlength='120' name='URL de la página' value='' /><i onmouseout='zctt.hidett()'
-																	onmouseover='zctt.showtt(&quot;Copia&#x20;y&#x20;pega&#x20;la&#x20;URL&#x20;de&#x20;la&#x20;p&aacute;gina&#x20;que&#x20;te&#x20;presenta&#x20;el&#x20;problema&quot;)'
-																	class='wtchelpinfo' style='margin-left:10px;'></i></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>Nombre del curso o programa&nbsp;&nbsp;<br><input
-																	type='text' maxlength='120' name='Nombre del curso o programa' value='' /><i
-																	onmouseout='zctt.hidett()'
-																	onmouseover='zctt.showtt(&quot;Escribe&#x20;el&#x20;nombre&#x20;del&#x20;curso&#x20;o&#x20;programa&quot;)'
-																	class='wtchelpinfo' style='margin-left:10px;'></i></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>Detalle de tu solicitud &nbsp;&nbsp;<br> <textarea
-																	name='Description' maxlength='3000' width='250' height='250' class='manfieldbdr'></textarea><i
-																	onmouseout='zctt.hidett()'
-																	onmouseover='zctt.showtt(&quot;Describe&#x20;tu&#x20;problema&#x20;o&#x20;duda&#x20;de&#x20;forma&#x20;clara,&#x20;concisa&#x20;y&#x20;expl&iacute;cita.&quot;)'
-																	class='wtchelpinfo' style='margin-left:10px;'></i></td>
-														</tr>
-														<tr>
-															<td nowrap class='zsFontClass hleft' width='25%' Top>Adjunto &nbsp;&nbsp;<br><span
-																	class="zsFontClass wtcuploadfile" id="zsBrowseAttachment">Adjuntar archivos</span><i
-																	onmouseout='zctt.hidett()'
-																	onmouseover='zctt.showtt(&quot;Adjuntar&#x20;documentos&#x20;o&#x20;im&aacute;genes&#x20;para&#x20;complementar&#x20;tu&#x20;solicitud&#x20;&#x28;M&aacute;x.&#x20;20&#x20;MB&#x29;&quot;)'
-																	class='wtchelpinfo' style='margin-left:10px;'></i><input class="wtcuploadinput" type='file'
-																	name='attachment_1' id='zsattachment_1' style='display:block;'
-																	onclick='zsOpenFileBrowseAttachment(event)'
-																	onchange='zsRenderBrowseFileAttachment(this.value, this)' /><input class="wtcuploadinput"
-																	type='file' name='attachment_2' id='zsattachment_2' style='display:none;'
-																	onclick='zsOpenFileBrowseAttachment(event)'
-																	onchange='zsRenderBrowseFileAttachment(this.value, this)' /> <input class="wtcuploadinput"
-																	type='file' name='attachment_3' id='zsattachment_3' style='display:none;'
-																	onclick='zsOpenFileBrowseAttachment(event)'
-																	onchange='zsRenderBrowseFileAttachment(this.value, this)' /> <input class="wtcuploadinput"
-																	type='file' name='attachment_4' id='zsattachment_4' style='display:none;'
-																	onclick='zsOpenFileBrowseAttachment(event)'
-																	onchange='zsRenderBrowseFileAttachment(this.value, this)' /> <input class="wtcuploadinput"
-																	type='file' name='attachment_5' id='zsattachment_5' style='display:none;'
-																	onclick='zsOpenFileBrowseAttachment(event)'
-																	onchange='zsRenderBrowseFileAttachment(this.value, this)' />
-																<div class="clboth"></div><span id='zsMaxSizeMessage'
-																	style='color:black;font-size: 8px;float: left;'>Cada archivo puede tener hasta 20 MB de
-																	tamaño.</span><span id='zsMaxLimitMessage'
-																	style='color:black;font-size: 8px;float: left;margin-left: 14px;display: none;'>Puede adjuntar
-																	un máximo de 5 archivos a la vez.</span>
-																<div id='zsFileBrowseAttachments'></div>
-															</td>
-														</tr>
-														<tr>
-															<td style='padding: 11px 5px 0px 5px;' colspan='2' align='center' width='25%'> <input type='submit'
-																	id="zsSubmitButton_453880000005422157" class='zsFontClass' value='Enviar'> &nbsp; &nbsp; <input
-																	type='button' class='zsFontClass' value='Restablecer'
-																	onclick="zsResetWebForm('453880000005422157')"> </td>
-														</tr>
-														<tr>
-															<td width='25%' align='left'></td>
-															<td style='padding: 0px 5px;' align='left' width='75%'>
-																<div class='wb_FtCon wb_common'><span>desarrollado por </span><a target='_blank'
-																		rel='noopener noreferrer' href='https://zoho.com/desk' class='wb_logoCon'><img
-																			class='wb_logo'
-																			src='https://d1ydxa2xvtn0b5.cloudfront.net/app/images/portalLogo.de847024ebc0131731a3.png' /></a>
-																</div>
-															</td>
-														</tr>
-													</table>
-												</form>
-											</div>
+												#tooltip-zc {
+													font: normal 12px Arial, Helvetica, sans-serif;
+													line-height: 18px;
+													position: absolute;
+													padding: 8px;
+													margin: 20px 0 0;
+													background: #fff;
+													border: 1px solid #528dd1;
+													-moz-border-radius: 5px;
+													-webkit-border-radius: 5px;
+													border-radius: 5px;
+													color: #eee;
+													-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+													-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+													z-index: 10000;
+													color: #777
+												}
+
+												.wtcmanfield {
+													color: #f00;
+													font-size: 16px;
+													position: relative;
+													top: 2px;
+													left: 1px;
+												}
+
+												#zsCloudAttachmentIframe {
+													width: 100%;
+													height: 100%;
+													z-index: 99999 !important;
+													position: fixed;
+													left: 0px;
+													top: 0px;
+													border-style: none;
+													display: none;
+													background-color: #fff;
+												}
+
+												.wtchelpinfo {
+													background-position: -246px -485px;
+													width: 15px;
+													height: 15px;
+													display: inline-block;
+													position: relative;
+													top: 2px;
+													background-image: url(https://d1ydxa2xvtn0b5.cloudfront.net/app/images/zs-mpro.b6c9cf2347c62390fdcb.png);
+												}
+
+												.zsMaxSizeMessage {
+													font-size: 13px;
+												}
+											</style>
+											<script src='https://d17nz991552y2g.cloudfront.net/app/js/jqueryandencoder.36e24db6ecfe6de0dce2.js'></script>
+
+											<script>function trimBoth(str) { return jQuery.trim(str); } function setAllDependancyFieldsMapping() { var mapDependancyLabels = getMapDependenySelectValues(jQuery("[id='property(module)']").val(), "JSON_MAP_DEP_LABELS"); if (mapDependancyLabels) { for (var i = 0; i < mapDependancyLabels.length; i++) { var label = mapDependancyLabels[i]; var obj = document.forms['zsWebToCase_453880000005422157'][label]; if (obj) { setDependent(obj, true); } } } } function getMapDependenySelectValues(module, key) { var dependencyObj = jQuery.parseJSON(jQuery("[id='dependent_field_values_" + module + "']").val()); if (dependencyObj == undefined) { return dependencyObj; } return dependencyObj[key]; } function setDependent(obj, isload) { var name = obj.id || (obj[0] && obj[0].id) || ""; var module = jQuery("[id='property(module)']").val(); var val = ""; var myObject = getMapDependenySelectValues(module, "JSON_VALUES"); if (myObject != undefined) { val = myObject[name]; } var mySelObject = getMapDependenySelectValues(module, "JSON_SELECT_VALUES"); if (val != null && val != "" && val != "null" && mySelObject) { var fields = val; for (var i in fields) { if (fields.hasOwnProperty(i)) { var isDependent = false; var label = i; var values = fields[i]; if (label.indexOf(")") > -1) { label = label.replace(/\)/g, '_____'); } if (label.indexOf("(") > -1) { label = label.replace(/\(/g, '____'); } if (label.indexOf(".") > -1) { label = label.replace(/\./g, '___'); } var depObj = document.forms['zsWebToCase_453880000005422157'][label]; if (depObj && depObj.options) { var mapValues = ""; var selected_val = depObj.value; var depLen = depObj.options.length - 1; for (var n = depLen; n >= 0; n--) { if (depObj.options[n].selected) { if (mapValues == "") { mapValues = depObj.options[n].value; } else { mapValues = mapValues + ";;;" + depObj.options[n].value; } } } depObj.value = ""; var selectValues = mySelObject[label]; for (var k in values) { var rat = k; if (rat == "-None-") { rat = ""; } var parentValues = mySelObject[name]; if (rat == trimBoth(obj.value)) { isDependent = true; depObj.length = 0; var depvalues = values[k]; var depLen = depvalues.length - 1; for (var j = 0; j <= depLen; j++) { var optionElement = document.createElement("OPTION"); var displayValue = depvalues[j]; var actualValue = displayValue; if (actualValue == "-None-") { optionElement.value = ""; displayValue = "-None-"; } else { optionElement.value = actualValue; } optionElement.text = displayValue; if (mapValues != undefined) { var mapValue = mapValues.split(";;;"); var len = mapValue.length; for (var p = 0; p < len; p++) { if (actualValue == mapValue[p]) { optionElement.selected = true; } } } depObj.options.add(optionElement); } } } if (!isDependent) { depObj.length = 0; var len = selectValues.length; for (var j = 0; j < len; j++) { var actualValue = selectValues[j]; var optionElement = document.createElement("OPTION"); if (actualValue == "-None-") { optionElement.value = ""; } else { optionElement.value = selectValues[j]; } optionElement.text = selectValues[j]; depObj.options.add(optionElement); } depObj.value = selected_val; } if (!isload) { setDependent(depObj, false); } var jdepObj = jQuery(depObj); if (jdepObj.hasClass('select2-offscreen')) { jdepObj.select2("val", jdepObj.val()); } } } } } } function setSelectAll(id) { var parentElement = document.getElementById(id); var hiddenInput = parentElement.querySelector('#hiddenoptions'); var selectAllElement = parentElement.querySelector('#selectall' + id); var selectedValues = []; var checkboxes = parentElement.querySelectorAll('.wb_multi_pick_input'); checkboxes.forEach(function (cb) { cb.checked = selectAllElement.checked; if (cb.checked && cb.value) { selectedValues.push(cb.value); } }); hiddenInput.value = selectedValues.join(','); } function setMultiSelectOption(id, obj) { var parentElement = document.getElementById(id); var hiddenInput = parentElement.querySelector('#hiddenoptions'); var selectAllElement = parentElement.querySelector('#selectall' + id); var selectedStr = hiddenInput.value; var selectedValues = selectedStr ? selectedStr.split(',') : []; if (obj.checked && obj.value) { selectedValues.push(obj.value); } else if (!obj.checked && obj.value) { selectedValues.splice(selectedValues.indexOf(obj.value), 1); selectAllElement.checked = false; } else { selectAllElement.checked = false; } hiddenInput.value = selectedValues.join(','); } var zctt = function () { var tt, mw = 400, top = 10, left = 0, doctt = document; var ieb = doctt.all ? true : false; return { showtt: function (cont, wid) { if (tt == null) { tt = doctt.createElement('div'); tt.setAttribute('id', 'tooltip-zc'); doctt.body.appendChild(tt); doctt.onmousemove = this.setpos; doctt.onclick = this.hidett; } tt.style.display = 'block'; tt.innerHTML = cont; tt.style.width = wid ? wid + 'px' : 'auto'; if (!wid && ieb) { tt.style.width = tt.offsetWidth; } if (tt.offsetWidth > mw) { tt.style.width = mw + 'px' } h = parseInt(tt.offsetHeight) + top; w = parseInt(tt.offsetWidth) + left; }, hidett: function () { tt.style.display = 'none'; }, setpos: function (e) { var u = ieb ? event.clientY + doctt.body.scrollTop : e.pageY; var l = ieb ? event.clientX + doctt.body.scrollLeft : e.pageX; var cw = doctt.body.clientWidth; var ch = doctt.body.clientHeight; if (l < 0) { tt.style.left = left + 'px'; tt.style.right = ''; } else if ((l + w + left) > cw) { tt.style.left = ''; tt.style.right = ((cw - l) + left) + 'px'; } else { tt.style.right = ''; tt.style.left = (l + left) + 'px'; } if (u < 0) { tt.style.top = top + 'px'; tt.style.bottom = ''; } else if ((u + h + left) > ch) { tt.style.top = ''; tt.style.bottom = ((ch - u) + top) + 'px'; } else { tt.style.bottom = ''; tt.style.top = (u + top) + 'px'; } } }; }(); var zsWebFormMandatoryFields = new Array("First Name", "Contact Name", "Email", "Category", "¿Cómo te podemos ayudar?", "Description", "Subject"); var zsFieldsDisplayLabelArray = new Array("Nombre", "Apellidos", "Correo electrónico", "Selecciona la categoría", "Selecciona el asunto", "Describe el asunto", "3 palabras clave del asunto"); function zsValidateMandatoryFields() { var name = ''; var email = ''; var isError = 0; for (var index = 0; index < zsWebFormMandatoryFields.length; index++) { isError = 0; var fieldObject = document.forms['zsWebToCase_453880000005422157'][zsWebFormMandatoryFields[index]]; if (fieldObject) { if (((fieldObject.value).replace(/^\s+|\s+$/g, '')).length == 0) { alert(zsFieldsDisplayLabelArray[index] + ' no puede estar vacío '); fieldObject.focus(); isError = 1; return false; } else { if (fieldObject.name == 'Email') { if (!fieldObject.value.match(/^([\w_][\w\-_.+\'&]*)@(?=.{4,256}$)(([\w]+)([\-_]*[\w])*[\.])+[a-zA-Z]{2,22}$/)) { isError = 1; alert('Introduzca una ID de correo electrónico válida'); fieldObject.focus(); return false; } } } if (fieldObject.nodeName == 'SELECT') { if (fieldObject.options[fieldObject.selectedIndex].value == '-None-') { alert(zsFieldsDisplayLabelArray[index] + ' no puede ser nulo'); fieldObject.focus(); isError = 1; return false; } } if (fieldObject.type == 'checkbox') { if (fieldObject.checked == false) { alert('Acepte por favor ' + zsFieldsDisplayLabelArray[index]); fieldObject.focus(); isError = 1; return false; } } } } if (isError == 0) { document.getElementById('zsSubmitButton_453880000005422157').setAttribute('disabled', 'disabled'); } } var ZSEncoder = { encodeForHTML: function (str) { if (str && typeof (str) === 'string') { return jQuery.encoder.encodeForHTML(str); } return str; }, encodeForHTMLAttribute: function (str) { if (str && typeof (str) === 'string') { return jQuery.encoder.encodeForHTMLAttribute(str); } return str; }, encodeForJavascript: function (str) { if (str && typeof (str) === 'string') { return jQuery.encoder.encodeForJavascript(str); } return str; }, encodeForCSS: function (str) { if (str && typeof (str) === 'string') { return jQuery.encoder.encodeForCSS(str); } return str; } }; var zsAttachedAttachmentsCount = 0; var zsAllowedAttachmentLimit = 4; var zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5]; function zsOpenCloudPickerIframe() { if (zsAttachedAttachmentsCount < 5) { var zsCloudPickerIframeSrc = jQuery('#zsCloudPickerIframeSrc').val(); jQuery('#zsCloudAttachmentIframe').attr('src', zsCloudPickerIframeSrc.substring(0, zsCloudPickerIframeSrc.length - 1) + (5 - zsAttachedAttachmentsCount)).show(); zsListenCloudPickerMessages(); } } function zsListenCloudPickerMessages() { if (window.addEventListener) { window.addEventListener('message', zsWebReceiveMessage, false); } else if (window.attachEvent) { window.attachEvent('onmessage', zsWebReceiveMessage); } } var zsCloudPickerJSON = {}; function zsWebReceiveMessage(event) { var zsUrlRegex = /^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\:\'\/\\+=&amp;%\$#_]*)?$/; if (zsUrlRegex.test(event.origin)) { var zsMessageType = event.data.split('&&&'); if (zsMessageType[0] == 'zsCloudPickerMessage') { if (window.addEventListener) { window.removeEventListener('message', zsWebReceiveMessage, false); } else if (window.attachEvent) { window.detachEvent('onmessage', zsWebReceiveMessage); } jQuery('#zsCloudAttachmentIframe').hide(); var isAttachedFilesDetails = zsMessageType[1].split('|||'); if (isAttachedFilesDetails[0] == 'cloudPickerResponse') { var zsCloudPickerAttachmentDetails = isAttachedFilesDetails[1].split('::::'); var zsCloudPickerAttachmentsJSON = jQuery.parseJSON(zsCloudPickerAttachmentDetails[0]); if (zsAttachedAttachmentsCount <= zsAllowedAttachmentLimit) { zsRenderCloudAttachments(zsCloudPickerAttachmentsJSON); } else { alert('No puede agregar más de 5 archivos'); return false; } } } } } function zsRenderCloudAttachments(zsCloudPickerAttachmentsJSON) { if (!jQuery.isEmptyObject(zsCloudPickerAttachmentsJSON)) { jQuery.each(zsCloudPickerAttachmentsJSON, function (cloudServiceName, attachments) { var zsAttachmentsArray = []; if (!jQuery.isEmptyObject(zsCloudPickerJSON[cloudServiceName])) { zsAttachmentsArray = zsCloudPickerJSON[cloudServiceName]; } for (var attachmentsIndex = 0; attachmentsIndex < attachments.length; attachmentsIndex++) { if (zsAttachedAttachmentsCount <= zsAllowedAttachmentLimit) { var zsCloudAttachmentsList = ''; var attachmentsDetailJSON = attachments[attachmentsIndex]; var zsCloudAttachmentName = attachmentsDetailJSON['docName']; var extension = zsCloudAttachmentName.split('.').pop().toLowerCase(); var unSupportedExtensions = ["ade", "adp", "apk", "appx", "appxbundle", "bat", "cab", "cer", "chm", "cmd", "com", "cpl", "dll", "dmg", "exe", "hlp", "hta", "ins", "iso", "isp", "jar", "js", "jse", "lnk", "mde", "msc", "msi", "msix", "msixbundle", "msp", "mst", "nsh", "pif", "ps1", "pst", "reg", "scr", "sct", "shb", "sys", "tmp", "url", "vb", "vbe", "vbs", "vxd", "wsc", "wsf", "wsh", "terminal"]; if (unSupportedExtensions.indexOf(extension) != -1) { alert("El archivo no se ha adjuntado porque su extensión no es compatible."); continue; } zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1; var zsCloudAttachmentId = attachmentsDetailJSON['docId']; zsCloudAttachmentId = zsCloudAttachmentId.replace(/\s/g, ''); zsCloudAttachmentsList = '<div class="filenamecls zsFontClass">' + ZSEncoder.encodeForHTML(zsCloudAttachmentName) + '<a id="' + ZSEncoder.encodeForHTMLAttribute(zsCloudAttachmentId) + '" cloudservice="' + ZSEncoder.encodeForHTMLAttribute(cloudServiceName) + '" class="zscloudAttachment" style="margin-left:10px;" href="javascript:;">X</a> </div>'; jQuery('#zsFileBrowseAttachments').append(zsCloudAttachmentsList); zsAttachmentsArray.push(attachmentsDetailJSON); zsCloudPickerJSON[cloudServiceName] = zsAttachmentsArray; jQuery("input[name='zsCloudPickerAttachments']")[0].value = JSON.stringify(zsCloudPickerJSON); } } }); } zsChangeMousePointer(); } jQuery(document).off('click.cAtm').on('click.cAtm', '.zscloudAttachment', function () { var cloudService = jQuery(this).attr('cloudservice'); var cloudAttachmentId = jQuery(this).attr('id'); var zsCloudAttachmentsArr = zsCloudPickerJSON[cloudService]; var isZsCloudAttachmentRemoved = 0; for (var attachmentsIndex = 0; attachmentsIndex < zsCloudAttachmentsArr.length; attachmentsIndex++) { if (isZsCloudAttachmentRemoved != 1) { jQuery.each(zsCloudAttachmentsArr[attachmentsIndex], function (attachmentsDetailJsonKey, attachmentsDetailJsonValue) { if (attachmentsDetailJsonKey == 'docId' && attachmentsDetailJsonValue.replace(/\s/g, '') == cloudAttachmentId) { var zsAttachmentToBeRemoved = jQuery.inArray(zsCloudAttachmentsArr[attachmentsIndex], zsCloudAttachmentsArr); zsCloudAttachmentsArr.splice(zsAttachmentToBeRemoved, 1); isZsCloudAttachmentRemoved = 1; } }); } } jQuery(this).parent().remove(); zsAttachedAttachmentsCount = zsAttachedAttachmentsCount - 1; jQuery("input[name='zsCloudPickerAttachments']")[0].value = JSON.stringify(zsCloudPickerJSON); zsChangeMousePointer(); }); function zsRenderBrowseFileAttachment(zsAttachmentObject, zsAttachmentDetails) { if (zsAttachmentObject != '') { if ((zsAttachmentDetails.files && (zsAttachmentDetails.files[0].size / (1024 * 1024)) > 20)) { zsAttachmentDetails.value = ''; alert('El tamaño de archivo máximo permitido es 20MB.'); return; } if (zsAttachedAttachmentsCount < 5) { var zsFileName = ''; if ((zsAttachmentObject.indexOf('\\') > -1)) { var zsAttachmentDataSplits = zsAttachmentObject.split('\\'); var zsAttachmentDataSplitsLen = zsAttachmentDataSplits.length; zsFileName = zsAttachmentDataSplits[zsAttachmentDataSplitsLen - 1]; } else { zsFileName = zsAttachmentObject; } var extension = zsFileName.split('.').pop().toLowerCase(); var unSupportedExtensions = ["ade", "adp", "apk", "appx", "appxbundle", "bat", "cab", "cer", "chm", "cmd", "com", "cpl", "dll", "dmg", "exe", "hlp", "hta", "ins", "iso", "isp", "jar", "js", "jse", "lnk", "mde", "msc", "msi", "msix", "msixbundle", "msp", "mst", "nsh", "pif", "ps1", "pst", "reg", "scr", "sct", "shb", "sys", "tmp", "url", "vb", "vbe", "vbs", "vxd", "wsc", "wsf", "wsh", "terminal"]; if (unSupportedExtensions.indexOf(extension) != -1) { alert("El archivo no se ha adjuntado porque su extensión no es compatible."); return; } var zsCurrentAttachmentIdTokens = jQuery(zsAttachmentDetails).attr('id').split('_'); var zsCurrentAttachmentId = parseInt(zsCurrentAttachmentIdTokens[1]); var zsAttachmentIdToBeRemoved = jQuery.inArray(zsCurrentAttachmentId, zsAttachmentFileBrowserIdsList); zsAttachmentFileBrowserIdsList.splice(zsAttachmentIdToBeRemoved, 1); var zsNextAttachmentId = zsAttachmentFileBrowserIdsList[0]; var zsnextAttachment = 'zsattachment_' + zsNextAttachmentId; jQuery('#zsattachment_' + zsCurrentAttachmentId).hide(); jQuery('#' + zsnextAttachment).show(); jQuery('#zsFileBrowseAttachments').append('<div class="filenamecls zsFontClass" id="file_' + zsCurrentAttachmentId + '">' + ZSEncoder.encodeForHTML(zsFileName) + '<a class="zsfilebrowseAttachment" style="margin-left:10px;" href="javascript:;" id="fileclose_' + zsCurrentAttachmentId + '">X</a></div>'); zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1; } } zsChangeMousePointer(); } jQuery(document).off('click.fba').on('click.fba', '.zsfilebrowseAttachment', function () { var currentlyDeletedElement = jQuery(this).attr('id').split('_')[1]; jQuery('#zsattachment_' + currentlyDeletedElement).val(''); jQuery('#zsattachment_' + currentlyDeletedElement).replaceWith(jQuery('#zsattachment_' + currentlyDeletedElement).clone()); jQuery(this).parent().remove(); zsAttachedAttachmentsCount = zsAttachedAttachmentsCount - 1; zsAttachmentFileBrowserIdsList.push(parseInt(currentlyDeletedElement)); zsRearrangeFileBrowseAttachments(); zsChangeMousePointer(); }); function zsRearrangeFileBrowseAttachments() { jQuery.each(jQuery('input[type = file]'), function (fileIndex, fileObject) { fileIndex = fileIndex + 1; if (fileIndex == zsAttachmentFileBrowserIdsList[0]) { jQuery('#zsattachment_' + fileIndex).show(); } else { jQuery('#zsattachment_' + fileIndex).hide(); } }); } function zsOpenFileBrowseAttachment(clickEvent) { if (zsAttachedAttachmentsCount >= 5) { clickEvent.preventDefault(); } } function zsChangeMousePointer() { if (zsAttachedAttachmentsCount >= 5) { jQuery('#zsMaxLimitMessage').show(); jQuery('#zsattachment_1,#zsattachment_2,#zsattachment_3,#zsattachment_4,#zsattachment_5').hide(); jQuery('#zsBrowseAttachment,#zsCloudAttachment').css('cursor', 'default'); } else { jQuery('#zsMaxLimitMessage').hide(); zsRearrangeFileBrowseAttachments(); jQuery('#zsBrowseAttachment,#zsCloudAttachment').css('cursor', 'pointer'); } } document.addEventListener('readystatechange', function () { if (document.readyState === 'complete' && window.zsRegenerateCaptcha) { zsRegenerateCaptcha(); } setAllDependancyFieldsMapping(); document.getElementById('zsSubmitButton_453880000005422157').removeAttribute('disabled'); zsAttachedAttachmentsCount = 0; zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5]; jQuery('#zsFileBrowseAttachments').html(''); jQuery.each(jQuery('input[type = file]'), function (fileIndex, fileObject) { var zsAttachmentId = jQuery(fileObject).attr('id'); var zsAttachmentNo = zsAttachmentId.split('_')[1]; var zsAttachedFile = jQuery('#zsattachment_' + zsAttachmentNo); if (zsAttachedFile[0] != undefined && zsAttachedFile[0].files[0] != undefined) { var zsFileBrowserAttachmentHtml = ''; zsAttachedFileName = zsAttachedFile[0].files[0].name; zsFileBrowserAttachmentHtml = '<div class="filenamecls zsFontClass" id="file_' + zsAttachmentNo + '">' + ZSEncoder.encodeForHTML(zsAttachedFileName) + '<a class="zsfilebrowseAttachment" style="margin-left:10px" href="javascript:;" id="fileclose_' + zsAttachmentNo + '">X</a></div>'; jQuery('#zsFileBrowseAttachments').append(zsFileBrowserAttachmentHtml); zsAttachedAttachmentsCount = zsAttachedAttachmentsCount + 1; var zsAttachmentIdToBeRemoved = jQuery.inArray(parseInt(zsAttachmentNo), zsAttachmentFileBrowserIdsList); zsAttachmentFileBrowserIdsList.splice(zsAttachmentIdToBeRemoved, 1); } }); if (document.forms['zsWebToCase_453880000005422157']['zsCloudPickerAttachments'] != undefined) { var zsCloudAttachments = jQuery.parseJSON(document.forms['zsWebToCase_453880000005422157']['zsCloudPickerAttachments'].value); zsRenderCloudAttachments(zsCloudAttachments); } zsRearrangeFileBrowseAttachments(); zsChangeMousePointer(); }); function zsResetWebForm(webFormId) { document.forms['zsWebToCase_' + webFormId].reset(); document.getElementById('zsSubmitButton_453880000005422157').removeAttribute('disabled'); setAllDependancyFieldsMapping(); zsAttachedAttachmentsCount = 0; zsAttachmentFileBrowserIdsList = [1, 2, 3, 4, 5]; jQuery('#zsFileBrowseAttachments').html(''); zsCloudPickerJSON = {}; if (document.forms['zsWebToCase_453880000005422157']['zsCloudPickerAttachments'] != undefined) { document.forms['zsWebToCase_453880000005422157']['zsCloudPickerAttachments'].value = JSON.stringify({}); } zsRearrangeFileBrowseAttachments(); zsChangeMousePointer(); } 
+											
+											</script>
+										</head>
+										<div id='zohoSupportWebToCase' align='center'>
+											<form name='zsWebToCase_453880000005422157' id='zsWebToCase_453880000005422157'
+												action='https://desk.zoho.com/support/WebToCase' method='POST' onSubmit='return zsValidateMandatoryFields()'
+												enctype='multipart/form-data'> <input type='hidden' name='xnQsjsdp'
+													value='edbsnca46cfc8ab3c389b0fd8e64bf5310985' /> <input type='hidden' name='xmIwtLD'
+													value='edbsnbaa7455ddfd93b5f992d1d971632ab2ff9d2236432800f4d96ded0952a4fd237' /> <input type='hidden'
+													name='xJdfEaS' value='' /> <input type='hidden' name='actionType' value='Q2FzZXM=' /> <input type="hidden"
+													id="property(module)" value="Cases" /> <input type="hidden" id="dependent_field_values_Cases"
+													value="&#x7b;&quot;JSON_VALUES&quot;&#x3a;&#x7b;&quot;Category&quot;&#x3a;&#x7b;&quot;CASECF10&quot;&#x3a;&#x7b;&quot;Alianzas&quot;&#x3a;&#x5b;&quot;Contacto&#x20;Alianzas&#x20;&quot;,&quot;Dise&ntilde;o&#x20;y&#x20;desarrollo&#x20;de&#x20;cursos&quot;,&quot;Impartir&#x20;un&#x20;curso&quot;,&quot;Producci&oacute;n&#x20;de&#x20;contenido&#x20;educativo&quot;,&quot;Virtualizaci&oacute;n&#x20;de&#x20;cursos&quot;&#x5d;,&quot;Servicio&#x20;social&#x20;y&#x20;pr&aacute;cticas&#x20;profesionales&quot;&#x3a;&#x5b;&quot;Convenio&#x20;para&#x20;servicio&#x20;social&#x20;o&#x20;pr&aacute;cticas&#x20;profesionales&quot;,&quot;Funciones&#x20;por&#x20;desempe&ntilde;ar&quot;,&quot;Procedimiento&#x20;para&#x20;realizar&#x20;servicio&#x20;o&#x20;pr&aacute;cticas&quot;&#x5d;,&quot;Inscripciones&quot;&#x3a;&#x5b;&quot;Confirmar&#x20;tu&#x20;inscripci&oacute;n&quot;&#x5d;,&quot;Certificaciones&#x20;y&#x20;constancias&quot;&#x3a;&#x5b;&quot;Descargar&#x20;tu&#x20;constancia&quot;,&quot;Error&#x20;en&#x20;tu&#x20;constancia&quot;&#x5d;,&quot;Ingresa&#x20;y&#x20;localiza&#x20;tu&#x20;curso&quot;&#x3a;&#x5b;&quot;Ingresar&#x20;a&#x20;tu&#x20;curso&quot;,&quot;Localizar&#x20;tu&#x20;curso&#x20;&quot;&#x5d;,&quot;Usuario&#x20;y&#x20;contrase&ntilde;a&quot;&#x3a;&#x5b;&quot;Cambiar&#x20;correo&#x20;electr&oacute;nico&#x20;&quot;,&quot;Editar&#x20;informaci&oacute;n&#x20;de&#x20;mi&#x20;cuenta&quot;,&quot;Ingresar&#x20;a&#x20;la&#x20;cuenta&quot;,&quot;Restablecer&#x20;contrase&ntilde;a&quot;&#x5d;,&quot;Espacios&#x20;f&iacute;sicos&quot;&#x3a;&#x5b;&quot;Conocer&#x20;los&#x20;espacios&#x20;f&iacute;sicos&quot;,&quot;Error&#x20;en&#x20;la&#x20;solicitud&#x20;de&#x20;reserva&quot;,&quot;Estacionamiento&quot;,&quot;Reservar&#x20;un&#x20;espacio&quot;&#x5d;,&quot;Bolsa&#x20;de&#x20;trabajo&quot;&#x3a;&#x5b;&quot;Unirse&#x20;al&#x20;equipo&#x20;de&#x20;trabajo&#x20;PLAi&quot;&#x5d;,&quot;Red&#x20;de&#x20;Talento&quot;&#x3a;&#x5b;&quot;Editar&#x20;perfil&#x20;de&#x20;Red&#x20;de&#x20;Talento&quot;&#x5d;&#x7d;&#x7d;&#x7d;,&quot;JSON_SELECT_VALUES&quot;&#x3a;&#x7b;&quot;Category&quot;&#x3a;&#x5b;&quot;--Selecci&oacute;n--&quot;,&quot;Inscripciones&quot;,&quot;Ingresa&#x20;y&#x20;localiza&#x20;tu&#x20;curso&quot;,&quot;Usuario&#x20;y&#x20;contrase&ntilde;a&quot;,&quot;Certificaciones&#x20;y&#x20;constancias&quot;,&quot;Espacios&#x20;f&iacute;sicos&quot;,&quot;Alianzas&quot;,&quot;Servicio&#x20;social&#x20;y&#x20;pr&aacute;cticas&#x20;profesionales&quot;,&quot;Bolsa&#x20;de&#x20;trabajo&quot;,&quot;Red&#x20;de&#x20;Talento&quot;&#x5d;,&quot;CASECF10&quot;&#x3a;&#x5b;&quot;-Selecciona-&quot;,&quot;Cambiar&#x20;correo&#x20;electr&oacute;nico&#x20;&quot;,&quot;Confirmar&#x20;tu&#x20;inscripci&oacute;n&quot;,&quot;Conocer&#x20;los&#x20;espacios&#x20;f&iacute;sicos&quot;,&quot;Contacto&#x20;Alianzas&#x20;&quot;,&quot;Convenio&#x20;para&#x20;servicio&#x20;social&#x20;o&#x20;pr&aacute;cticas&#x20;profesionales&quot;,&quot;Descargar&#x20;tu&#x20;constancia&quot;,&quot;Dise&ntilde;o&#x20;y&#x20;desarrollo&#x20;de&#x20;cursos&quot;,&quot;Editar&#x20;informaci&oacute;n&#x20;de&#x20;mi&#x20;cuenta&quot;,&quot;Editar&#x20;perfil&#x20;de&#x20;Red&#x20;de&#x20;Talento&quot;,&quot;Error&#x20;en&#x20;la&#x20;solicitud&#x20;de&#x20;reserva&quot;,&quot;Error&#x20;en&#x20;tu&#x20;constancia&quot;,&quot;Estacionamiento&quot;,&quot;Funciones&#x20;por&#x20;desempe&ntilde;ar&quot;,&quot;Impartir&#x20;un&#x20;curso&quot;,&quot;Ingresar&#x20;a&#x20;la&#x20;cuenta&quot;,&quot;Ingresar&#x20;a&#x20;tu&#x20;curso&quot;,&quot;Localizar&#x20;tu&#x20;curso&#x20;&quot;,&quot;Procedimiento&#x20;para&#x20;realizar&#x20;servicio&#x20;o&#x20;pr&aacute;cticas&quot;,&quot;Producci&oacute;n&#x20;de&#x20;contenido&#x20;educativo&quot;,&quot;Reservar&#x20;un&#x20;espacio&quot;,&quot;Restablecer&#x20;contrase&ntilde;a&quot;,&quot;Unirse&#x20;al&#x20;equipo&#x20;de&#x20;trabajo&#x20;PLAi&quot;,&quot;Virtualizaci&oacute;n&#x20;de&#x20;cursos&quot;&#x5d;&#x7d;,&quot;JSON_MAP_DEP_LABELS&quot;&#x3a;&#x5b;&quot;Category&quot;&#x5d;&#x7d;" />
+												<input type='hidden' name='returnURL' value='https&#x3a;&#x2f;&#x2f;plai.mx' />
+												<table border='0' cellspacing='0' class='zsFormClass'>
+													<tr>
+														<td colspan='2' class='zsFontClass'><strong>Contacto PLAi</strong></td>
+													</tr><br>
+													<tr>
+														<td nowrap class='zsFontClass hleft' width='25%' Top>Nombre&nbsp;&nbsp;<br><input type='text'
+																maxlength='120' name='First Name' value='' class='manfieldbdr' /></td>
+													</tr>
+													<tr>
+														<td nowrap class='zsFontClass hleft' width='25%' Top>Apellidos&nbsp;&nbsp;<br><input type='text'
+																maxlength='120' name='Contact Name' class='manfieldbdr' /></td>
+													</tr>
+													<tr>
+														<td nowrap class='zsFontClass hleft' width='25%' Top>Correo electr&oacute;nico&nbsp;&nbsp;<br><input
+																type='text' maxlength='120' name='Email' value='' class='manfieldbdr' /></td>
+													</tr>
+													<tr>
+														<td nowrap class='zsFontClass hleft' width='25%' Top>Selecciona la categor&iacute;a
+															&nbsp;&nbsp;<br><select name='Category' value='' class='manfieldbdr'
+																onchange="setDependent(this, false)" id='Category'>
+																<option value='--Selección--'>--Selección--</option>
+																<option value='Inscripciones'>Inscripciones</option>
+																<option value='Ingresa y localiza tu curso'>Ingresa y localiza tu curso</option>
+																<option value='Usuario y contraseña'>Usuario y contraseña</option>
+																<option value='Certificaciones y constancias'>Certificaciones y constancias</option>
+																<option value='Espacios físicos'>Espacios físicos</option>
+																<option value='Alianzas'>Alianzas</option>
+																<option value='Servicio social y prácticas profesionales'>Servicio social y prácticas
+																	profesionales</option>
+																<option value='Bolsa de trabajo'>Bolsa de trabajo</option>
+																<option value='Red de Talento'>Red de Talento</option>
+															</select></td>
+													</tr>
+													<tr>
+														<td nowrap class='zsFontClass hleft' width='25%' Top>Selecciona el asunto &nbsp;&nbsp;<br><select
+																name='¿Cómo te podemos ayudar?' value='' class='manfieldbdr'
+																onchange="setDependent(this, false)" id='CASECF10'>
+																<option value='-Selecciona-'>-Selecciona-</option>
+																<option value='Cambiar correo electrónico '>Cambiar correo electrónico </option>
+																<option value='Confirmar tu inscripción'>Confirmar tu inscripción</option>
+																<option value='Conocer los espacios físicos'>Conocer los espacios físicos</option>
+																<option value='Contacto Alianzas '>Contacto Alianzas </option>
+																<option value='Convenio para servicio social o prácticas profesionales'>Convenio para servicio
+																	social o prácticas profesionales</option>
+																<option value='Descargar tu constancia'>Descargar tu constancia</option>
+																<option value='Diseño y desarrollo de cursos'>Diseño y desarrollo de cursos</option>
+																<option value='Editar información de mi cuenta'>Editar información de mi cuenta</option>
+																<option value='Editar perfil de Red de Talento'>Editar perfil de Red de Talento</option>
+																<option value='Error en la solicitud de reserva'>Error en la solicitud de reserva</option>
+																<option value='Error en tu constancia'>Error en tu constancia</option>
+																<option value='Estacionamiento'>Estacionamiento</option>
+																<option value='Funciones por desempeñar'>Funciones por desempeñar</option>
+																<option value='Impartir un curso'>Impartir un curso</option>
+																<option value='Ingresar a la cuenta'>Ingresar a la cuenta</option>
+																<option value='Ingresar a tu curso'>Ingresar a tu curso</option>
+																<option value='Localizar tu curso '>Localizar tu curso </option>
+																<option value='Procedimiento para realizar servicio o prácticas'>Procedimiento para realizar
+																	servicio o prácticas</option>
+																<option value='Producción de contenido educativo'>Producción de contenido educativo</option>
+																<option value='Reservar un espacio'>Reservar un espacio</option>
+																<option value='Restablecer contraseña'>Restablecer contraseña</option>
+																<option value='Unirse al equipo de trabajo PLAi'>Unirse al equipo de trabajo PLAi</option>
+																<option value='Virtualización de cursos'>Virtualización de cursos</option>
+															</select></td>
+													</tr>
+													<tr>
+														<td nowrap class='zsFontClass hleft' width='25%' Top>Describe el asunto &nbsp;&nbsp;<br> <textarea
+																name='Description' maxlength='3000' width='250' height='250' class='manfieldbdr'></textarea><i
+																onmouseout='zctt.hidett()'
+																onmouseover='zctt.showtt(&quot;Describe&#x20;tu&#x20;problema&#x20;de&#x20;forma&#x20;clara&quot;)'
+																class='wtchelpinfo' style='margin-left:10px;'></i></td>
+													</tr>
+													<tr>
+														<td nowrap class='zsFontClass hleft' width='25%' Top>3 palabras clave del asunto&nbsp;&nbsp;<br><input
+																type='text' maxlength='255' name='Subject' value='' class='manfieldbdr' /><i
+																onmouseout='zctt.hidett()' onmouseover='zctt.showtt(&quot;Max.&#x20;50&#x20;caracteres&quot;)'
+																class='wtchelpinfo' style='margin-left:10px;'></i></td>
+													</tr>
+													<tr>
+														<td nowrap class='zsFontClass hleft' width='25%' Top>Adjunto &nbsp;&nbsp;<br><span
+																class="zsFontClass wtcuploadfile" id="zsBrowseAttachment">Adjuntar archivos</span><i
+																onmouseout='zctt.hidett()'
+																onmouseover='zctt.showtt(&quot;Adjunta&#x20;capturas&#x20;de&#x20;pantalla&#x20;para&#x20;completar&#x20;la&#x20;informaci&oacute;n&quot;)'
+																class='wtchelpinfo' style='margin-left:10px;'></i><input class="wtcuploadinput" type='file'
+																name='attachment_1' id='zsattachment_1' style='display:block;'
+																onclick='zsOpenFileBrowseAttachment(event)'
+																onchange='zsRenderBrowseFileAttachment(this.value, this)' /><input class="wtcuploadinput"
+																type='file' name='attachment_2' id='zsattachment_2' style='display:none;'
+																onclick='zsOpenFileBrowseAttachment(event)'
+																onchange='zsRenderBrowseFileAttachment(this.value, this)' /> <input class="wtcuploadinput"
+																type='file' name='attachment_3' id='zsattachment_3' style='display:none;'
+																onclick='zsOpenFileBrowseAttachment(event)'
+																onchange='zsRenderBrowseFileAttachment(this.value, this)' /> <input class="wtcuploadinput"
+																type='file' name='attachment_4' id='zsattachment_4' style='display:none;'
+																onclick='zsOpenFileBrowseAttachment(event)'
+																onchange='zsRenderBrowseFileAttachment(this.value, this)' /> <input class="wtcuploadinput"
+																type='file' name='attachment_5' id='zsattachment_5' style='display:none;'
+																onclick='zsOpenFileBrowseAttachment(event)'
+																onchange='zsRenderBrowseFileAttachment(this.value, this)' />
+															<div class="clboth"></div><span id='zsMaxSizeMessage'
+																style='color:black;font-size: 8px;float: left;'>Cada archivo puede tener hasta 20 MB de
+																tamaño.</span><span id='zsMaxLimitMessage'
+																style='color:black;font-size: 8px;float: left;margin-left: 14px;display: none;'>Puede adjuntar
+																un máximo de 5 archivos a la vez.</span>
+															<div id='zsFileBrowseAttachments'></div>
+														</td>
+													</tr>
+													<tr>
+														<td style='padding: 11px 5px 0px 5px;' colspan='2' align='center' width='25%'> <input type='submit'
+																id="zsSubmitButton_453880000005422157" class='zsFontClass' value='Enviar'> &nbsp; &nbsp; <input
+																type='button' class='zsFontClass' value='Restablecer'
+																onclick="zsResetWebForm('453880000005422157')"> </td>
+													</tr>
+													<tr>
+														<td width='25%' align='left'></td>
+														<td style='padding: 0px 5px;' align='left' width='75%'>
+															<div class='wb_FtCon wb_common'><span>desarrollado por </span><a target='_blank'
+																	rel='noopener noreferrer' href='https://zoho.com/desk' class='wb_logoCon'><img
+																		class='wb_logo'
+																		src='https://d1ydxa2xvtn0b5.cloudfront.net/app/images/portalLogo.de847024ebc0131731a3.png' /></a>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</form>
+										</div>
+
 										</html>
 										<!-- end::iframe ayuda -->
 									</div>
