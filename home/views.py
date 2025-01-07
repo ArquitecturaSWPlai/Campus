@@ -53,6 +53,8 @@ def buscar_alumno(request):
             perfil, created = UserProfile.objects.get_or_create(user=usr)
             inscripciones = Inscripciones.objects.filter(usuario=perfil)
             return usr, perfil, inscripciones
+        else:
+            return usr, None, None
     else:
         return None, None, None
 def redirect_moodle(request):
