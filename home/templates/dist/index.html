@@ -551,7 +551,7 @@
 												</i>
 											</span>
 											<a
-												onclick="changePage('controlEscolar'); getfechaCE('{{json_alumno.0.fecha_ingreso}}', '{{json_alumno.0.matricula}}')">
+												onclick="changePage('controlEscolar');">
 												<span class="menu-title gorditas">Control escolar</span>
 											</a>
 										</span>
@@ -1122,7 +1122,7 @@
 															<!--end::Amount-->
 															<!--begin::Subtitle-->
 															<span id="nombreUsuario"
-																class="text-white opacity-75 pt-1 fw-semibold fs-6">{{ json_alumno.0.nombre }}</span>
+																class="text-white opacity-75 pt-1 fw-semibold fs-6">{{usuario.first_name}}</span>
 															<!--end::Subtitle-->
 														</div>
 														<!--end::Title-->
@@ -1183,7 +1183,7 @@
 																	<span class="path3"></span>
 																</i>
 															</span>
-															<a onclick="changePage('controlEscolar')">
+															<a onclick="changePage('controlEscolar');">
 																<span class="menu-title linkPlai">Control escolar</span>
 															</a>
 														</span>
@@ -1673,9 +1673,11 @@
 										</span>
 									</div>
 									<div class="row">
-										<h1 class="nombreCE p-3 pt-5 pb-0 mb-0">{{ json_alumno.0.nombre }} {{ json_alumno.0.apellido_paterno }} {{ json_alumno.0.apellido_materno }}</h1>
+										<h1 class="nombreCE p-3 pt-5 pb-0 mb-0">{{usuario.first_name}} {{usuario.last_name}}</h1>
 										<h2 class="text-secondary" style="font-weight: 500;font-style: italic; color: #ced0d8 !important"
-											id="antiguedadCE">Miembro desde </h2>
+											id="antiguedadCE">Miembro desde {{usuario.date_joined}}</h2>
+										<h4 class="text-secondary" style="color: #ced0d8 !important"
+											id="antiguedadCE">Matrícula: {{perfil.matricula}}</h4>
 										<div class="container p-5" style="background: #f9f9f9;">
 											<!--begin::Table container-->
 											<div class="table-responsive p-5">
@@ -1689,23 +1691,23 @@
 																<span class="fs-8 text-muted fw-semibold">Cursos</span>
 															</th>
 															<th class=" min-w-100px">
-																<span class="fs-8 text-muted fw-semibold">Fecha</span>
+																<span class="fs-8 text-muted fw-semibold">Fecha de inscripción</span>
 															</th>
 														</tr>
 													</thead>
 													<!--end::Table head-->
 													<!--begin::Table body-->
-													{% for alumno in json_alumno %}
+													{% for inscripcion in inscripciones %}
 													<tr>
 														<th>
 															<div class="symbol symbol-50px me-2">
 																<span
-																	class="fw-bold fs-9">{{alumno.oferta_educativa}}</span>
+																	class="fw-bold fs-9">{{inscripcion.curso.titulo_equivalente}}</span>
 															</div>
 														</th>
 														<td>
 															<div class="d-flex flex-column w-100 me-2">
-																<span class="fw-bold fs-9">{{ alumno.fecha_inicio_periodo }}</span>
+																<span class="fw-bold fs-9">{{ inscripcion.fecha_inscripcion }}</span>
 															</div>
 														</td>
 													</tr>
@@ -1716,9 +1718,9 @@
 											</div>
 											<!--end::Table container-->
 										</div>
-										<button type="button" class="mt-5 btn btn-sm col-md-3 col-sm-6"
+										{% comment %} <button type="button" class="mt-5 btn btn-sm col-md-3 col-sm-6"
 											onclick="window.open('https://plai.academic.lat/', '_blank');"
-											style="background: #006098; color: white; width: auto;">Ir a control escolar</button>
+											style="background: #006098; color: white; width: auto;">Ir a control escolar</button> {% endcomment %}
 									</div>
 								</div>
 							</div>
@@ -2124,7 +2126,7 @@
 										</span>
 									</p>
 									<a class="btn espacios-fisicos mt-1"
-										onclick="window.open('https://plai.mx/reservarespaciosfisicos', '_blank');">Reservar
+										onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdp3kWY3eIRJzwcw2GAUsaZukqW3pT9m3K2XvyNGOqZW23U9Q/viewform', '_blank');">Reservar
 										espacios fisicos</a>
 								</div>
 							</div>
@@ -3173,22 +3175,7 @@
 			return false;
 		}
 
-		function getfechaCE(date, mat) {
-			const fecha = new Date(date);
-			const dia = fecha.getDate();
-			const mes = fecha.toLocaleString('es-MX', { month: 'long' });
-			const año = fecha.getFullYear();
-			let fechaFormateada = ""
-			fecha_validada = fecha instanceof Date && !isNaN(fecha);
-			if(fecha_validada){
-				fechaFormateada = `Miembro desde ${dia} / ${mes} / ${año} <h4 style="color: #ced0d8 !important"> Matrícula: ${mat} </h4>`;
-			}
-			else{
-				fechaFormateada = `<h4 style="color: #ced0d8 !important"> Matrícula: ${mat} </h4>`;
-			}
-			const h2Element = document.getElementById("antiguedadCE");
-			h2Element.innerHTML = fechaFormateada;
-		}
+		
 
 		const buscarIdMoodle = async (endpoint, token, emailUser) => {
 			try {
